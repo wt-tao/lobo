@@ -1,0 +1,150 @@
+/* pages/lobo_task/lobo_task.wxss */
+.div{
+  width: 100%;
+  height: 1210rpx;
+  /* border: 1rpx solid black; */
+  position: relative;
+  z-index: 1002;
+  margin-top: -1214rpx;
+}
+.div_top{
+  height: 220rpx;
+  /* border: 1rpx solid black; */
+}
+.div_top_{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  /* border: 1rpx solid black; */
+}
+.div_top_list{
+  width: 60%;
+  margin-left: 50rpx;
+  /* border: 1rpx solid black; */
+}
+.zount_money_text{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 20rpx;
+  color: #FFE2FF;
+}
+.count_money_num{
+  height: 90rpx;
+  font-size: 70rpx;
+  line-height: 90rpx;
+  color: #FFFBFB;
+}
+.div_list_right{
+  width: 35%;
+  /* border: 1rpx solid black; */
+}
+.comdent_tedxt{
+  font-size: 22rpx;
+  color: #FFEFFF;
+}
+.num{
+  width: 90%;
+  height: 35rpx;
+  margin-left: 5%;
+  /* border: 1rpx solid black; */
+  display: flex;
+  flex-direction: row;
+}
+.num_{
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 50%;
+  background: #F9FBFA;
+  color: #AA7FC7;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 35rpx;
+}
+.exp{
+  width: 94%;
+  line-height: 35rpx;
+  font-size: 22rpx;
+  color: #FFE4FF;
+  text-align: right;
+}
+.progress{
+  border-radius:100rpx;overflow:hidden;width:95%;margin-left:2.5%;
+  background-color: opacity(0.3);
+  margin-top:12rpx;
+}
+.money_div{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  /* border: 1rpx solid black; */
+}
+.money_div_list{
+  width: 33%;
+  color: #FFEFFF;
+  text-align: center;
+}
+.money_div_list_text{
+    font-size: 20rpx;
+    line-height: 50rpx;
+}
+.money_div_list_texts{
+  font-size: 50rpx;
+  line-height: 60rpx;
+}
+.annotation{
+  height: 150rpx;
+  width: 100%;
+  border-top:10rpx solid #FFCFE4; 
+  border-bottom:10rpx solid #FFCFE4; 
+}
+.annotation_div{
+  width: 90%;
+  height: 85%;
+  margin-top: 20rpx;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: row;
+  /* border: 1rpx solid black; */
+}
+.annotation_text{
+  width: 80%;
+  height: 100%;
+}
+.imgs{
+  width: 95%;
+  margin-left: 2.5%;
+  height: 680rpx;
+  margin-top: 10rpx;
+  /* border: 1rpx solid black; */
+  position: relative;
+  z-index: 1002;
+  margin-top: -680rpx;
+}
+.imgs_list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 90rpx;
+    color: #FFE8FF;
+    line-height: 90rpx;
+    border-bottom:1rpx solid  #FFBFFF;
+}
+.imgs_list_tp{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  /* border: 1rpx solid black; */
+}
+.imgs_list_count_money{
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  width: 50%;
+  /* border: 1rpx solid black; */
+}
+.imgs_def{
+  color: #AA55D4;
+  font-size: 20rpx;
+}

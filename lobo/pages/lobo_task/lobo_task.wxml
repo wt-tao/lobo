@@ -1,0 +1,67 @@
+<!--pages/lobo_task/lobo_task.wxml-->
+<image src='../../img/zy_8.png' style='width:100%;height:1210rpx;' ></image>
+<view class='div'>
+    <view class='div_top'>
+        <view class='div_top_'>
+              <view class='div_top_list'>
+                  <view class='zount_money_text'>财产总额（元）</view>
+                  <view class='count_money_num'>{{task.haveStr}}</view>
+              </view>
+              <view class='div_list_right'>
+                  <image src='../../img/zy_20.png' style='width:180rpx;margin-top:20rpx;margin-left:25rpx;' mode='widthFix' bindtap='pay'></image>
+                  <view class='comdent_tedxt'><image src='../../img/zy_7.png' style='width:30rpx;margin-left:50rpx;' mode='widthFix'/> lobo商城</view>
+              </view>
+        </view>
+        <view class='num'>
+            <view class='num_'>{{task.level}}</view>
+            <view class='exp'>EXP:{{task.expGet}}/{{task.expNeed}}</view>
+        </view>
+      <progress class='progress'  percent='{{exp}}' stroke-width='8' active color="#FAFCF7" backgroundColor='#C572F4' active-mode='forwards'></progress>
+    </view> 
+
+    <view class='money_div'>
+        <view class='money_div_list'>
+          <view class='money_div_list_text'>lobo基金(元)</view>
+          <view class='money_div_list_texts'>{{task.loboStr}}</view>
+        </view>
+         <view class='money_div_list'>
+          <view class='money_div_list_text'>共同资产(元)</view>
+          <view class='money_div_list_texts'>{{task.loveStr}}</view>
+        </view>
+         <view class='money_div_list'>
+          <view class='money_div_list_text'>可提现基金(元)</view>
+          <view class='money_div_list_texts'>{{task.couldWithdrawStr}}</view>
+        </view>
+    </view>
+
+    <view class='annotation'>
+        <view class='annotation_div'>
+              <view class='annotation_text'>
+                  <view style='font-size:28rpx;color:#FFE5FF'>邀请好友</view>
+                  <view style='font-size:20rpx; color:#FFBDFF;flex-wrap: wrap'>邀请好友注册欧美的小程序并在个人中心完善身份认证信息，每次你可以得到1元的lobo基金，邀请好友完善并绑定情侣可获得5元lobo基金</view>
+              </view>
+              <button plain='true' style='border:none' open-type='share'>
+                <image src='../../img/zy_14.png' style='width:70rpx;margin-left:50rpx;margin-top:40rpx;' mode='widthFix'/>
+              </button>
+        </view>
+    </view>
+
+    <image src='../../img/zy_6.png' style='width:100%;height:680rpx; width: 95%;margin-left: 2.5%;' ></image>
+
+    <view class='imgs'>
+        <view class='imgs_list' style='height:110rpx;line-height:110rpx;'>
+            <view class='imgs_list_tp'>
+                <image src='../../img/zy_23.png' style='width:100%;' mode='widthFix'></image>
+            </view>
+            <view class='imgs_list_count_money'>今日获得资产：{{task.todayAddStr}}</view>
+            <view class='imgs_def'>如何完成任务</view>
+            <image src='../../img/zy_9.png' style='width:50rpx;margin-top:30rpx;margin-left:30rpx;' mode='widthFix'></image>
+        </view>
+     
+         <view class='imgs_list' wx:for='{{task.levelTask}}'>
+            <view class='imgs_list_count_money' style='margin-left:60rpx;width:68%;font-size:26rpx;'>{{item.name}}({{item.status}}/{{item.t_count}})</view>
+            <view class='imgs_def'>{{item.fund}}元/{{item.exp}}EXP</view>
+        </view>
+  
+    </view>
+</view>

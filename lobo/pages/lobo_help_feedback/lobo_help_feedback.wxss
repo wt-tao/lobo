@@ -1,0 +1,36 @@
+/* pages/lobo_help_feedback/lobo_help_feedback.wxss */
+page{
+  background-color: #F9FBFA;
+}
+.text{
+  margin-top: 40rpx;
+  position: absolute;
+  top: 20rpx;
+  width: 95%;
+  margin-left: 2.5%;
+  color: #515352;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+.area{
+  width: 92.5%;
+  margin-left: 2.5%;
+  background-color: #F4F4F4;
+  border-radius: 15rpx;
+  margin-top: 150rpx;
+  padding-left: 2.5%;
+  padding-top: 20rpx;
+  font-size: 30rpx;
+}
+.feedback{
+  width: 200rpx;
+  height: 100rpx;
+  background-color: #D3D3D3;
+  color: white;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  margin-top: 100rpx;
+  margin-left: 500rpx;
+  border-radius: 60rpx;
+}

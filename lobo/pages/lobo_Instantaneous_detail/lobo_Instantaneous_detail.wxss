@@ -1,0 +1,86 @@
+/* pages/lobo_Instantaneous_detail/lobo_Instantaneous_detail.wxss */
+.fx{
+  width: 70rpx;
+  position: fixed;
+  top: 30rpx;
+  left: 20rpx;
+}
+.title{
+  width: 90%;
+  margin-left: 5%;
+  flex-wrap: wrap;
+  font-size: 32rpx;
+  margin-top: 10rpx;
+  font-family: Arial, Helvetica, sans-serif
+}
+.time{
+  margin-left: 7%;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.imgs{
+  width: 96%;
+  margin-left: 2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.imgs_list{
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  /* border: 1rpx solid black; */
+}
+
+.tx{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+  /* border: 1rpx solid black; */
+}
+.imgst{
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  width: 80rpx;
+  height: 80rpx;
+}
+.img_text{
+  width: 64%;
+  padding-left: 20rpx;
+  height: 100rpx;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  /* border: 1rpx solid black; */
+}
+.bottom{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  width: 100%;
+  /* border: 1rpx solid black; */
+  background-color: #E7E7E7;
+}
+.yuying{
+  width: 60rpx;
+  height: 60rpx;
+  border: 1rpx solid #A1A1A1;
+  border-radius: 50%;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.input{
+  width: 70%;
+  margin-left: 30rpx;
+  border-radius: 20rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  background-color: white;
+}

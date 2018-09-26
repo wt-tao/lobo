@@ -1,0 +1,208 @@
+<image class='page_bg' src='/image/bg0.png'></image>
+<view class='main'>
+  <view class='head'>
+      <view class='head_left'>
+        <view class='year_box'>
+          <text>{{dates[swiperIndex].year}}</text>
+          <image class='goto' src='/image/goto.png'></image>
+        </view>
+        <view class='month_text'>{{monthEnglish[dates[swiperIndex].month]}}</view>
+      </view>
+      <image class='icon_add' catchtap='addtap' src='/image/icon_add1.png'></image>
+  </view>
+  <swiper circular current='1' bindchange='swiperChange' duration='300'>
+    <swiper-item wx:for='{{dateArr}}' wx:for-item='dateArrItem' wx:key='this'>
+      <view class='xingqi'>
+        <text class='xingqi_sub' wx:for='{{week}}' wx:key='this'>{{item}}</text>
+      </view>
+      <view class='date_box'>
+        <view class='date_sub' wx:for='{{dateArrItem}}' wx:key='this' style='{{item.bg=="1"?"opacity: 0.2;":""}}' data-index='{{index}}' data-item='{{item}}' catchtap='dateTap'>
+          <view class='today_icon' wx:if='{{index+1==today}}'></view>
+          
+          <image class='convention_img' src='/image/foot.png' wx:if='{{item.type==2}}'></image>
+          <image class='mark_img' src='/image/flags.png' wx:if='{{item.type==1}}'></image>
+          
+          <text class='date_text' style='{{index+1==today&&"color:#DD71E3;"}}'>{{item.date}}</text>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  
+  <view class='warp'>
+    <view class='summary_box'>
+      <view class='summary_left'>
+          <text class='summary_hint'>恋爱时长</text>
+          <view><text class='day_num'>{{together[0].leftDay}}</text><text class='day_e'>day</text></view>
+      </view>
+      <view class='summary_center'></view>
+      <view class='summary_rigth'>
+          <!-- <view class='filtrate_box'>
+              <text class='option'></text>
+          </view> -->
+          <view class='select_box'>
+              <view class='select' catchtap='selectTap'>
+                  <text class='select_text'>{{selectData[index]}}</text>
+                  <image class='select_img {{show&&"select_img_rotate"}}' src='/image/gobottom.png'></image>         
+              </view>
+              <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+                  <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+              </view>
+          </view>
+      </view>
+    </view>
+   <block wx:if='{{index==0}}'> 
+    <view class='event_list' wx:for='{{list}}' wx:key='this' wx:if='{{item.type==1}}'>
+      <view class='event_left'>
+          <text class='event_day'>距离还有{{item.leftDay}}天</text>
+          <text class='event_date'>{{item.anniversaryDate[0]}}</text>
+      </view>
+      <view class='icon_box'>
+      <!-- 这里判断是纪念日还是其他 -->
+        <image src='/image/foot.png'  class='foot_icon' wx:if='{{item.type==2}}'></image>
+        <image src='/image/flags.png' class='flags_icon' wx:if='{{item.type==1}}'></image>
+      </view>
+      <view class='event_right'>
+        <text class='event_name'>{{item.name}}</text>
+        <text class='event_content'>{{item.hourAndMinute_anniversaryDate}}{{item.comment}}</text>
+      </view>
+    </view>
+     <view class='event_list' wx:for='{{list}}' wx:key='this' wx:if='{{item.type==2}}'>
+      <view class='event_left'>
+          <text class='event_day'>{{item.leftDay}}天</text>
+          <text class='event_date'>{{item.anniversaryDate[0]}}</text>
+      </view>
+      <view class='icon_box'>
+      <!-- 这里判断是纪念日还是其他 -->
+        <image src='/image/foot.png'  class='foot_icon' wx:if='{{item.type==2}}'></image>
+        <image src='/image/flags.png' class='flags_icon' wx:if='{{item.type==1}}'></image>
+      </view>
+      <view class='event_right'>
+        <text class='event_name'>{{item.name}}</text>
+        <text class='event_content'>{{item.hourAndMinute_anniversaryDate}}{{item.comment}}</text>
+      </view>
+    </view>
+</block>
+ <block wx:if='{{index==1}}'> 
+    <view class='event_list' wx:for='{{list}}' wx:key='this' wx:if='{{item.type==1}}'>
+      <view class='event_left'>
+          <text class='event_day'>距离还有{{item.leftDay}}天</text>
+          <text class='event_date'>{{item.anniversaryDate[0]}}</text>
+      </view>
+      <view class='icon_box'>
+      <!-- 这里判断是纪念日还是其他 -->
+        <image src='/image/foot.png'  class='foot_icon' wx:if='{{item.type==2}}'></image>
+        <image src='/image/flags.png' class='flags_icon' wx:if='{{item.type==1}}'></image>
+      </view>
+      <view class='event_right'>
+        <text class='event_name'>{{item.name}}</text>
+        <text class='event_content'>{{item.hourAndMinute_anniversaryDate}}{{item.comment}}</text>
+      </view>
+    </view>
+     <view class='event_list' wx:for='{{list}}' wx:key='this' wx:if='{{item.type==2}}'>
+      <view class='event_left'>
+          <text class='event_day'>{{item.leftDay}}天</text>
+          <text class='event_date'>{{item.anniversaryDate[0]}}</text>
+      </view>
+      <view class='icon_box'>
+      <!-- 这里判断是纪念日还是其他 -->
+        <image src='/image/foot.png'  class='foot_icon' wx:if='{{item.type==2}}'></image>
+        <image src='/image/flags.png' class='flags_icon' wx:if='{{item.type==1}}'></image>
+      </view>
+      <view class='event_right'>
+        <text class='event_name'>{{item.name}}</text>
+        <text class='event_content'>{{item.hourAndMinute_anniversaryDate}}{{item.comment}}</text>
+      </view>
+    </view>
+</block>
+ <block wx:if='{{index==2}}'> 
+    <view class='event_list' wx:for='{{list}}' wx:key='this' wx:if='{{item.type==1}}'>
+      <view class='event_left'>
+          <text class='event_day'>距离还有{{item.leftDay}}天</text>
+          <text class='event_date'>{{item.anniversaryDate[0]}}</text>
+      </view>
+      <view class='icon_box'>
+      <!-- 这里判断是纪念日还是其他 -->
+        <image src='/image/foot.png'  class='foot_icon' wx:if='{{item.type==2}}'></image>
+        <image src='/image/flags.png' class='flags_icon' wx:if='{{item.type==1}}'></image>
+      </view>
+      <view class='event_right'>
+        <text class='event_name'>{{item.name}}</text>
+        <text class='event_content'>{{item.hourAndMinute_anniversaryDate}}{{item.comment}}</text>
+      </view>
+    </view>
+     <view class='event_list' wx:for='{{list}}' wx:key='this' wx:if='{{item.type==2}}'>
+      <view class='event_left'>
+          <text class='event_day'>{{item.leftDay}}天</text>
+          <text class='event_date'>{{item.anniversaryDate[0]}}</text>
+      </view>
+      <view class='icon_box'>
+      <!-- 这里判断是纪念日还是其他 -->
+        <image src='/image/foot.png'  class='foot_icon' wx:if='{{item.type==2}}'></image>
+        <image src='/image/flags.png' class='flags_icon' wx:if='{{item.type==1}}'></image>
+      </view>
+      <view class='event_right'>
+        <text class='event_name'>{{item.name}}</text>
+        <text class='event_content'>{{item.hourAndMinute_anniversaryDate}}{{item.comment}}</text>
+      </view>
+    </view>
+</block>
+  </view>
+<!-- 弹窗 -->
+  <view class='dialog' wx:if='{{addActivity}}'>
+      <view class='dialog_bg' catchtap='saveTaps'></view>
+      <view class='dialog_main'>
+        <image class='dialog_main_bg' src='/image/bg1.png'></image>
+        <view class='dialog_warp'>
+            <input class='title_input' placeholder='标题' placeholder-style='color:#ccc;' value='{{titleValue}}' bindinput='name' maxlength='10'></input>
+            <textarea class='content_input' placeholder='概述' placeholder-style='color:#ccc;' value='{{activityContent}}' bindinput='comment'  maxlength='100'></textarea>
+            
+            <picker mode="date" bindchange="bindPickerChange" data-types='date' value="{{dateValue}}">
+                <view class='list_view'>
+                    <text class='list_title'>日期</text>
+                    <text class='list_content'>{{dateValue}}</text>
+                    <image class='goto_icon' src='/image/goto1.png'></image>
+                </view>
+            </picker>
+            
+            <view class='list_view' data-types='time' catchtap='bindPickerChange'>
+                <text class='list_title'>时间</text>
+                <text class='list_content'>{{startTime}}~{{endTime}}</text>
+                <image class='goto_icon' src='/image/goto1.png'></image>
+            </view>
+            
+            <picker mode="selector" bindchange="bindPickerChange" data-types='type' value="{{typeValue}}" range='{{typeData}}'>
+              <view class='list_view'>
+                  <text class='list_title'>类型</text>
+                  <view class='list_content qita'>
+                  <!-- 判断类型 -->
+                      <image class='foot_icon1' src='/image/foot.png' wx:if='{{typeValue==1}}'></image>
+                      <image class='flags_icon1' src='/image/flags.png' wx:if='{{typeValue==0}}'></image>
+                      <text style='margin-left:20rpx;'>{{typeData[typeValue]}}</text>
+                  </view>
+                  
+                  <!-- <text class='list_content'>{{typeData[typeValue]}}</text> -->
+                  <image class='goto_icon' src='/image/goto1.png'></image>
+              </view>
+            </picker>
+            <picker mode="selector" bindchange="bindPickerChange" data-types='privacy' value="{{privacyValue}}" range='{{privacyData}}'>
+              <view class='list_view'>
+                  <text class='list_title'>隐私</text>
+                  <text class='list_content'>{{privacyData[privacyValue]}}</text>
+                  <image class='goto_icon' src='/image/goto1.png'></image>
+              </view>
+            </picker>
+            <picker mode="selector" bindchange="bindPickerChange" data-types='remind' value="{{remindValue}}" range='{{remindData}}'>
+              <view class='list_view' style='border:0;'>
+                  <image class='icon_ling' src='/image/ling.png'></image>
+                  <text class='list_title'>提醒</text>
+                  <text class='list_content'>{{remindData[remindValue]}}</text>
+                  <image class='goto_icon' src='/image/goto1.png'></image>
+              </view>
+            </picker>
+            <image class='save_icon' src='/image/zy_5.png' catchtap='saveTap'></image>
+        </view>
+      </view>
+  </view>
+  
+</view>
+<timeScope id='timeScope' bindtimedata='timeComfirm'></timeScope>

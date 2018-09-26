@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "timeScope": "/component/timeScope/timeScope"
+  },
+  "navigationBarTitleText": "安排"
+  }

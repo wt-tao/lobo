@@ -1,0 +1,33 @@
+/* pages/main/main.wxss */
+.img{
+  position: absolute;
+  top: 0;
+  z-index: 1001,
+}
+.index{
+  position: relative;
+  top: 400rpx;
+  z-index: 1002;
+  animation: show 3s;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

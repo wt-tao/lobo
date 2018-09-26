@@ -1,0 +1,210 @@
+<!--pages/not_uesr/not_uesr.wxml-->
+<image src='../../img/1-02_03.jpg' style='width:100%;' mode='widthFix'/>
+
+<view class='user_head' >
+  <view class='user_news'>
+    <view class='yuan' bindtap='user_detail'>
+      <!-- <view class="wrap">  -->
+        <!-- <view class="top" bindtap='ca'> 
+          <canvas class="cir" style="width:180rpx; height:180rpx;" canvas-id="canvasArc"> 
+          </canvas>      
+          <!-- <view class="cc">中间</view>  
+        </view> -->
+        <!-- </view>  -->
+        <image src='{{url}}{{my.me_head_img==""?head_Img:my.me_head_img}}' style='width:100%;height:100%' mode='aspectFill'  class='imgsss'></image>
+    </view>
+
+    <view class='right'>
+        <view class='right_top'>0</view>
+        <view class='right_center'>
+            <view class='right_name' bindtap='user_detail'>
+                <view class='right_name_'>{{my.me_nickname}}</view>
+                <view class='right_card'>{{my.me_no}}</view>
+            </view>
+            <view class='tis'>你还处于单身状态，请绑定用户</view>
+            <button plain='true' open-type='share' style='width:100rpx;border:none'>
+            <image src='../../img/(bz)1aa.png' style='width:80rpx;margin-top:20rpx;margin-left:-20rpx;' mode='widthFix'/>
+            </button>
+        </view>
+    </view>
+  </view>
+  <view class='tb'>
+      <view class='tb_list'>
+          <view class='tb_list_img' catchtap='lobo_news' >
+            <image src='../../img/c1.png' style='width:100%;margin-top:15rpx;margin-left:20rpx;' mode='widthFix'/>
+            <view class='diand' wx:if='{{head.newMessage!=""}}'></view>
+          </view>
+          <view class='tb_list_text'>我的消息</view>
+      </view>
+       <view class='tb_list' catchtap='money'>
+          <view class='tb_list_img'>
+            <image src='../../img/(bz)2.png' style='width:70%;margin-top:10rpx;margin-left:15%' mode='widthFix'/>
+            <!-- <view class='diand' style='left:-2rpx;'></view> -->
+          </view>
+          <view class='tb_list_text'>lobo钱包</view>
+      </view>
+       <view class='tb_list' catchtap='record'>
+          <view class='tb_list_img'>
+            <image src='../../img/(bz)3.png' style='width:90%;margin-top:20rpx;margin-left:5%' mode='widthFix'/>
+            <!-- <view class='diand' style='left:-2rpx;'></view> -->
+          </view>
+          <view class='tb_list_text'>传音记录</view>
+      </view>
+       <view class='tb_list' catchtap='lobo_union'>
+          <view class='tb_list_img'>
+            <image src='../../img/(bz)4.png' style='width:60%;margin-top:10rpx;margin-left:20%' mode='widthFix'/>
+            <!-- <view class='diand' style='left:-2rpx;'></view> -->
+          </view>
+          <view class='tb_list_text'>lobo联盟</view>
+      </view>
+  </view>
+</view>
+<!-- 新用户提示 -->
+<!-- <block > -->
+<block wx:if='{{my.userInfoCompletionProgress!=4}}'>
+  <image src='../../img/c2.png'  style='width:95%;margin-left:2.5%;margin-top:-20rpx;' mode='widthFix'/>
+  <view class='jigao'>
+        <view class='jigao_top'>
+            <view class='jigao_top_img'>
+                <image src='../../img/(bz)5.png' style='width:100%;margin-top:10rpx;' mode='widthFix'/>
+            </view>
+            <view class='jigao_auto'>
+                <view class='jigao_auto_top'>请尽快完成您的身份信息</view>
+                <view class='jigao_auto_tops'>身份信息不完整，会影响使用哦~</view>
+            </view>
+
+            <view class='bottom' wx:if='{{my.userInfoCompletionProgress ==1}}' bindtap='user_detail'>完善信息</view>
+            <view class='bottom' wx:elif='{{my.userInfoCompletionProgress ==2}}' bindtap='lobo_password'>隐私密码</view>
+            <view class='bottom' wx:elif='{{my.userInfoCompletionProgress ==3}}'>完成绑定</view>
+        </view> 
+        <view class='jigao_buttom'>
+            <view class='jigao_buttom_list'>
+              <view class='jigao_buttom_number' style='{{my.userInfoCompletionProgress==2||my.userInfoCompletionProgress==3||my.userInfoCompletionProgress==4?"background-color: #35AE47":""}}'>1</view>
+              <view class='jigao_buttom_text'>完善信息</view>
+            </view>
+            <view class='jigao_buttom_list'>
+              <view class='jigao_buttom_number' style='{{my.userInfoCompletionProgress==3||my.userInfoCompletionProgress==4?"background-color: #35AE47":""}}'>2</view>
+              <view class='jigao_buttom_text'>隐私密码</view>
+            </view>
+            <view class='jigao_buttom_list'>
+              <view class='jigao_buttom_number' style='{{my.userInfoCompletionProgress==4?"background-color: #35AE47":""}}'>3</view>
+              <view class='jigao_buttom_text'>绑定对象</view>
+            </view>
+            <view class='jigao_buttom_list'>
+              <view class='jigao_buttom_number'>4</view>
+              <view class='jigao_buttom_text'>开始使用</view>
+            </view>
+        </view>
+  </view>
+</block>
+<view class='list' style='margin-top:10rpx;' >
+    <view class='list_com' bindtap='card_voucher'>
+        <view class='list_img'>
+            <image src='../../img/tc-146 (6).png' style='width:100%;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>卡券</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:500rpx;' mode='widthFix' />
+    </view>
+     <view class='list_com' bindtap='lobo_task'>
+        <view class='list_img'>
+            <image src='../../img/tc-146 (3).png' style='width:100%;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>任务</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:500rpx;' mode='widthFix' />
+    </view>
+       <view class='list_com' bindtap='lobo_celandar'>
+        <view class='list_img'>
+            <image src='../../img/tc-146 (1).png' style='width:100%;margin-top:7rpx;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>安排</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:500rpx;' mode='widthFix' />
+    </view>
+      <view class='list_com' bindtap='lobo_marry'>
+        <view class='list_img'>
+            <image src='../../img/(bz555).png' style='width:100%;margin-top:7rpx;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>结婚提现</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:450rpx;' mode='widthFix' />
+    </view>
+       <view class='list_com' bindtap='lobo_history'>
+        <view class='list_img'>
+            <image src='../../img/tc-146 (7).png' style='width:100%;margin-top:7rpx;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>绑定历史</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:450rpx;' mode='widthFix' />
+    </view>
+</view>
+
+<view class='list' style='margin-top:10rpx;'>
+    <view class='list_com' bindtap='lobo_password'>
+        <view class='list_img'>
+            <image src='../../img/tc-146 (2).png' style='width:100%;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>隐私密码</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:450rpx;' mode='widthFix' />
+    </view>
+     <view class='list_com' bindtap='help'>
+        <view class='list_img'>
+            <image src='../../img/tc-146 (5).png' style='width:100%;' mode='widthFix'/>
+        </view>
+        <view class='list_text' >客服中心</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:450rpx;' mode='widthFix' />
+    </view>
+       <view class='list_com' bindtap='lobo_about'>
+        <view class='list_img'>
+            <image src='../../img/tc-146 (4).png' style='width:100%;margin-top:7rpx;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>关于</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:500rpx;' mode='widthFix' />
+    </view>
+       <!-- <view class='list_com' bindtap='relieve'>
+        <view class='list_img'>
+            <image src='../../img/tc-824.png' style='width:100%;margin-top:7rpx;' mode='widthFix'/>
+        </view>
+        <view class='list_text' style='color:#B8B8B8'>解除绑定</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:450rpx;' mode='widthFix' />
+    </view> -->
+</view>
+<view style='height:100rpx;width:100%;'></view>
+
+
+
+<view class="bg"  style='display:{{display}}' bindtap='display'></view>
+<!-- <view class='sure' catchtap='hideview' style='display:{{display}}'>确定</view> -->
+<view class="show"  style='display:{{display}}'>
+    <view class='show1'>
+        <view class='div_input'>
+            <input class='inputs' type='password' value='{{password}}' placeholder='请输入隐私密码...' placeholder-style='color:#939393;font-size:22rpx;' bindinput='password'/>
+        </view>
+        <view class='div_imgs'>
+          <image src='../../img/tc-592.png' style='width:130rpx;z-index:1001;' mode='widthFix'></image>
+          <image src='../../img/tc-542.png' style='width:150rpx;' mode='widthFix' class='imgss' bindtap='sures'></image>
+        </view>
+                    <!-- <image src='../../img/tc-542.png' style='width:190rpx;' mode='widthFix' class='imgss'></image> -->
+    </view>
+    
+</view>
+
+
+
+
+
+
+
+
+ <view class='dibu'>
+      <view class='dibu_div'>
+          <view class='dibu_div_com' bindtap='index'>
+            <image src='../../img/zy_18.png' style='width:40rpx;margin-left: 25rpx;margin-top:5rpx;' mode='widthFix'/>
+          </view>
+          <view class='dibu_div_com' bindtap='home_page'>
+            <image src='../../img/zy_18.png' style='width:40rpx;margin-left: 25rpx;margin-top:5rpx;' mode='widthFix'/>
+          </view>
+          <view class='dibu_div_com' bindtap='Instantaneous'>
+            <image src='../../img/zy_18.png' style='width:40rpx;margin-left: 25rpx;margin-top:5rpx;' mode='widthFix'/>
+          </view>
+          <view class='dibu_div_com' >
+            <image src='../../img/zy_19.png' style='width:40rpx;margin-left: 25rpx;margin-top:5rpx;' mode='widthFix'/>
+          </view>
+      </view>
+    </view>

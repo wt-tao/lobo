@@ -1,0 +1,87 @@
+/* pages/marry/marry.wxss */
+.shop{
+  width: 300rpx;
+  height: 350rpx;
+  /* border: 1rpx solid black; */
+  margin-top: 250rpx;
+  margin-left: 230rpx;
+}
+.loading{
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  color: #B2B2B2;
+  font-weight: 800;
+  margin-top: 100rpx;
+}
+.pag{
+  width: 100%;
+  height: 100%;
+  background-color: #EFEFF4;
+}
+.marry_tit{
+  width: 90%;
+  height: 300rpx;
+  margin-left: 5%;
+  /* border: 1rpx solid black; */
+  position: relative;
+  top: -200rpx;
+  background-color: white;
+  border-radius: 30rpx;
+}
+.marry_tit_count{
+  width: 90%;
+  margin-left: 5%;
+  font-size: 30rpx;
+  color: #353535;
+  padding-top: 30rpx;
+}
+.marry_tit_text{
+  width: 90%;
+  margin-left: 5%;
+  font-size: 26rpx;
+  color: #BDBDBD;
+}
+.marry{
+  width: 100%;
+  height: 500rpx;
+  background-color: white;
+  /* border: 1rpx solid black; */
+  margin-top: -200rpx;
+}
+.marry_card_tit{
+  width: 90%;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #3A3A3A;
+  /* border: 1rpx solid black; */
+}
+.marry_card_com{
+  width: 93%;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+.marry_card_com_tp{
+  width: 200rpx;
+  height: 150rpx;
+  margin-top: 10rpx;
+  border: 1rpx solid #CCCCCC;
+}
+.marry_card_com_tp_text{
+  font-size: 26rpx;
+  margin-top: 70rpx;
+}
+.submin{
+  width: 90%;
+  margin-left: 5%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  margin-top: 100rpx;
+}

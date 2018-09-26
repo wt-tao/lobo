@@ -1,0 +1,77 @@
+<!--pages/home_page/home_page.wxml-->
+<image src='../../img/bg1.png' style='width:100%; height:550rpx;' />
+<view class='head'>
+  <view class='head_top'>
+    <image src='../../img/(bz).png' style='width:20%;margin-top:30rpx;margin-left:20rpx;' mode='widthFix'/>
+      <button plain open-type='share' style='width:180rpx;margin-top:10rpx;margin-left:380rpx;border:none'>
+        <image src='../../img/zy_14.png' style='width:50%;margin-left:80rpx;' mode='widthFix'/>
+    </button>
+  </view>
+  <view class='head_img'>
+    <view class='head_img_tc'>
+        <image src="{{url}}{{head.user1Img==''?head_img:head.user1Img}}"  class='imgs' style='width:100%;height:100%' mode='aspectFill'/>
+    </view>
+  </view>
+
+  <view class='head_not'>
+    <view class='head_not_text'> 未 绑 定 </view>
+    <text class='text1' style='color:#A1A1A1'>0</text>
+  </view>
+
+  <view class='head_nots ead_not' style='font-size:18rpx; text-align: center;margin-top:10rpx;'>你还处于单身状态，无法使用部分功能，请绑定用户</view>
+</view>
+
+<view class='home_center'>
+  <view class='home_center_top'>
+      <view class='home_center_top_list'>
+          <view class='love_time'>恋爱时长</view>
+          <view class='love_time'><text style='font-size:50rpx;color:#010101'>00</text>　天</view>
+          <view class='love_time'>距离下一个纪恋日<text style='color:#010101'>*</text>天</view>
+      </view>
+      <view class='home_center_top_list' style='border:none;'>
+          <view class='love_time' style='margin-left:60rpx'>账户总额</view>
+          <view class='love_time' style='margin-left:60rpx'><text style='font-size:50rpx;color:#010101'>0.00</text>　元</view>
+          <view class='love_time' style='margin-left:60rpx'>今日净增长<text style='color:#010101'>0.00</text>元</view>
+      </view>
+  </view>
+  <view class='progress'>
+    <progress  percent='0' stroke-width='16' active color="#E7E7E7" style='border-radius:100rpx;overflow:hidden'></progress>
+  </view>
+</view>
+
+<view class='news'>
+  <image src='../../img/tc-466.png' style='width:20rpx;margin-top:15rpx;margin-left:30rpx;' mode='widthFix'/>
+  <text style='color:#4C4D48;font-size:30rpx;margin-left:15rpx;margin-top:20rpx;'>lobo咨迅（推荐）</text>
+</view>
+
+<view class='news_div' wx:for='{{lineList}}' bindtap='lobo_information_detali' id='{{item.id}}'>
+  <view class='news_div_top'>
+      <view class='news_tb'>
+          <image src='{{url}}/img/lobo/1x.png' style='width:100%' mode='widthFix'></image>
+      </view>
+      <view class='news_name'>lobo联盟</view>
+      <view class='news_time'>{{item.createTime}}</view>
+  </view>
+  <view class='naws_title'>{{item.title}}</view>
+  <text class='news_count'>{{item.topic}}</text>
+  <view style='height:20rpx;width:100%'></view>
+</view>
+
+<view style='height:100rpx;width:100%'></view>
+
+ <view class='dibu'>
+      <view class='dibu_div'>
+          <view class='dibu_div_com' bindtap='index'>
+            <image src='../../img/zy_18.png' style='width:40rpx;margin-left: 25rpx;margin-top:5rpx;' mode='widthFix'/>
+          </view>
+          <view class='dibu_div_com' >
+            <image src='../../img/zy_19.png' style='width:40rpx;margin-left: 25rpx;margin-top:5rpx;' mode='widthFix'/>
+          </view>
+          <view class='dibu_div_com' bindtap='Instantaneous'>
+            <image src='../../img/zy_18.png' style='width:40rpx;margin-left: 25rpx;margin-top:5rpx;' mode='widthFix'/>
+          </view>
+          <view class='dibu_div_com' bindtap='not_uesr'>
+            <image src='../../img/zy_18.png' style='width:40rpx;margin-left: 25rpx;margin-top:5rpx;' mode='widthFix'/>
+          </view>
+      </view>
+    </view>

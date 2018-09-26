@@ -1,0 +1,143 @@
+
+page{
+  background-color: #EFEFF4;
+}
+.Deposit{
+  /* border: 1rpx solid black; */
+  position: absolute;
+  top: 0;
+}
+.Deposit_money{
+  margin-left: 30rpx;
+  font-weight: 800;
+  font-size: 60rpx;
+  color: white;
+  margin-top: 90rpx;
+}
+.Assets_Total{
+  color: white;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+}
+.Doubt{
+  width: 40rpx;height:40rpx;line-height: 40rpx;
+  text-align: center;background-color: white;color: #FE3433;
+  border-radius: 50%;margin-left: 20rpx;
+}
+.Deposit_num{
+  background-color: white;
+  margin-top: -10rpx;
+  height: 615rpx;
+   border: 1rpx solid #EEEEEE; 
+}
+.Deposit_num_title{
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  color: #B8B8B8;
+  font-size: 26rpx;
+}
+.Deposit_num_coun{
+  margin-left: 30rpx;
+  height: 150rpx;
+  border-bottom:1rpx solid #EEEEEE;
+  width: 90%;
+  font-size: 30rpx;
+  display: flex;flex-direction: row;margin-top: 30rpx;
+}
+.input{
+  margin-left: 20rpx;
+  font-size: 60rpx;
+  font-weight: 700;
+  height: 80rpx;
+}
+
+.Deposit_payment_1{
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  color: #353535;
+  font-size: 35rpx;
+}
+.icon{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 450rpx;
+  /* border: 1rpx solid black; */
+}
+
+.Deposit_payment{
+  color: #353535;
+  font-size: 30rpx;
+  width:100%;
+  margin-top: 70rpx;
+  height: 130rpx;
+  border-top: 1rpx solid #CFCFCF;
+  background-color: white;
+  display: flex;
+  flex-direction: row
+}
+.Deposit_pay{
+  height: 130rpx;
+  line-height: 130rpx;
+  font-size: 30rpx;
+  color: #353535;
+  margin-left: 30rpx
+}
+.pay{
+  height: 100rpx;
+  width: 300rpx;
+  color: white;
+  background-color: #CB71EF;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 100rpx;
+  position: relative;
+  left: 220rpx;
+  top:15rpx;
+}
+.yhk{
+  width: 95%;
+  margin-left: 2.5%;
+  height: 80rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  color: #353535;
+  background-color: #FAFAFA;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+.yhk_kh{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  
+}
+.yhk_input{
+  margin-left: 20rpx;
+  width: 85%;
+  margin-top: 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  /* border: 1rpx solid black; */
+}
+.ktx{
+  width: 95%;
+  margin-left: 2.5%;
+  height: 80rpx;
+  /* border: 1rpx solid black; */
+  display: flex;
+  flex-direction: row;
+}
+.ktx_com{
+  font-size: 26rpx;
+  color: #B6B6B6;
+  height: 80rpx;
+  margin-top: 50rpx;
+  width: 50%; 
+  line-height: 80rpx;
+}

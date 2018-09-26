@@ -1,0 +1,67 @@
+/* pages/lobo_news/lobo_news.wxss */
+page{
+  background-color: #F2F2F2;
+}
+.img{
+  width: 95%;
+  margin-left: 2.5%;
+}
+.div{
+  width: 100%;
+  background-color: white;
+}
+.tit{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  
+}
+.news_tit{
+  margin-left: 5%;
+  font-size: 24rpx;
+  color: #797979;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.news_bj{
+  text-decoration: underline;
+  color: #AE8CBA;
+  margin-left: 440rpx;
+}
+.div_list{
+  width: 100%;
+  /* margin-left: 5%; */
+  /* border: 1rpx solid black; */
+
+}
+.dis_lis{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.imgs{
+  width: 50rpx;
+  margin-left: 5%;
+  /* border: 1rpx solid black; */
+ 
+}
+.div_details{
+  width: 83%;
+  flex-wrap: wrap;
+  font-size: 26rpx;
+  color: #1B1B1B;
+  margin-top: 15rpx;
+   /* border: 1rpx solid black; */
+}
+.div_time{
+  font-size: 14rpx;
+  margin-top: 20rpx;
+  color: #D3D3D3;
+  margin-left: 80rpx;
+}
+.tex{
+  width: 100%;
+  text-align: center;
+  font-size: 18rpx;
+  color: #D3D3D3;
+}

@@ -1,0 +1,26 @@
+<!--pages/lobo_information_detali/lobo_information_detali.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
+<scroll-view scroll-y style='height:1180rpx;'> 
+      <view class="detail-top">
+          <view class="title">
+            <text class="detail-title">{{news.title}}</text>
+          </view>
+          <view class='news_com'>
+            <view class='news_com_tx'>
+                <image src='{{url}}{{news.coverImg}}' style='width:100%;height:100%' mode='aspectFill'></image>
+            </view>
+
+            <view class='news_com_right'>
+                <view class='news_com_right_tit'>{{news.topic}}</view>
+                <view class='news_com_right_coun'>{{news.createTime}} 发布</view>
+            </view>
+          </view>
+    </view>
+    <!--中部-->
+     <view class="detail-midden"> 
+      <!-- <view class="detail-context"> -->
+        <!-- //<view class="context">{{data.content}}</view> -->
+        <template is="wxParse" data="{{wxParseData:da.nodes}}"/> 
+      <!-- </view> -->
+     </view> 
+</scroll-view>

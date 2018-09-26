@@ -1,0 +1,18 @@
+/* pages/lobo_help_details/lobo_help_details.wxss */
+@import "/wxParse/wxParse.wxss";
+page{
+  background-color: #DEDFE0;
+}
+.kuang{
+  width: 95%;
+  margin-top: 20rpx;
+  height: 1160rpx;
+  font-size: 28rpx;
+  text-indent: 20rpx;
+  color: #353535;
+  margin-left: 2.5%;
+  border-radius:10rpx;
+  background-color: white; 
+  /* border: 1rpx solid black; */
+  padding-top: 20rpx;
+}

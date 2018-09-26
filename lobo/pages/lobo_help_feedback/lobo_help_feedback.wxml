@@ -1,0 +1,6 @@
+<!--pages/lobo_help_feedback/lobo_help_feedback.wxml-->
+<text class='text'>非常感谢您的宝贵意见，我们会第一时间回复</text>
+
+<textarea class='area' placeholder='填写你的问题' placeholder-style='color:#9F9F9F;font-size:30rpx;' bindinput='content'></textarea>
+
+<view class='feedback' bindtap='feedback'>发送</view>

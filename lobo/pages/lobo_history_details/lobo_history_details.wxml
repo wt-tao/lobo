@@ -1,0 +1,58 @@
+<!--pages/lobo_history_details/lobo_history_details.wxml-->
+<view class='div'>
+  <view class='div_list'>
+    <view class='div_img'>
+        <image src='{{url}}{{head.headImg==""?head_Img:head.headImg}}' style='width:100%;height:100%' mode='aspectFill' class='img'></image>
+    </view>
+    <view class='time'>
+        <view class='name'>{{head.nickname}}</view>
+        <view class='begTime'>绑定于{{head.pairTime}}</view>
+        <view class='begTime' style='margin-top:10rpx;'>解绑于{{head.breakTime}}</view>
+    </view>
+    <image src='../../img/tc-670.png' style='width:200rpx;margin-left:75rpx;' mode='widthFix'></image>
+    <image src='../../img/zy_70.png' style='width:70rpx;margin-top:110rpx;z-index:9999;margin-left:-150rpx' mode='widthFix' catchtap='del'></image>
+  </view>
+  <view class='bottom'>
+      <view class='bottom_list'>
+          <view class='days'>{{head.day}}天</view>
+          <view class='days_text'>恋爱时长</view>
+      </view>
+      <view class='bottom_list'>
+          <view class='days'>{{hs.cardPage.totalCount}}</view>
+          <view class='days_text'>爱情瞬间</view>
+      </view>
+      <view class='bottom_list'>
+          <view class='days'>{{head.shared}}</view>
+          <view class='days_text'>分享</view>
+      </view>
+  </view>
+</view>
+<view class='tit'>
+    <view class='all'>全部 ></view>
+    <view class='all_tb'>
+        <image src='{{url}}/img/userCenterIcon/(bz)b2 (2).png' style='width:40rpx;margin-left:50rpx;' mode='widthFix'/>
+        <image src='{{url}}/img/userCenterIcon/(bz)b2 (1).png' style='width:40rpx;margin-left:20rpx;' mode='widthFix'/>
+    </view>
+</view>
+
+<view class='list' wx:for='{{listArray}}'>
+    <image src='{{url}}{{item.imgs[0]}}' style='width:100%; height:200rpx;border-top-left-radius:30rpx;order-top-right-radius:30rpx;' mode='aspectFill'></image>
+    <view class='tits'>{{item.title}}</view>
+    <view class='texts'> {{item.content}}</view>
+
+  <block wx:for='{{item.replyList}}' wx:for-item='key'>
+    <view class='tx'  wx:if='{{key.user_id!=userId}}'>
+        
+        <image src='{{url}}{{key.head_img==""?head_img:key.head_img}}' class='imgst' mode='aspectFill'></image>
+        <image src='../../img/zy_33 (2).png' style='width:70%;margin-left:20rpx;' mode='widthFix'></image>
+        <view class='img_text' style='margin-left:-69%;'>{{key.content}}</view>
+    </view>
+      <view class='tx' wx:if='{{key.user_id ==userId}}'>
+        <image src='../../img/zy_33 (1).png' style='width:70%;margin-left:100rpx;' mode='widthFix'></image>
+        <image src='{{url}}{{key.head_img==""?head_img:key.head_img}}' class='imgst' style='margin-left:40rpx;' mode='aspectFill'></image>
+        
+        <view class='img_text' style='margin-left:-86%;width:58%;text-align: right;'>{{key.content}}</view>
+    </view>
+</block>
+    <view style='height:20rpx;width:100%'></view>
+</view>

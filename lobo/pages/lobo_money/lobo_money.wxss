@@ -1,0 +1,105 @@
+/* pages/money/money.wxss */
+page{
+  background-color: #F2F2F2;
+}
+.head{
+  width: 100%;
+  height: 400rpx;
+  /* border: 1rpx solid black; */
+  position: relative;
+  top: -410rpx;
+}
+.head_top{
+  font-size: 30rpx;
+  color: #FFE2FF;
+  width: 95%;
+  text-align: right;
+  margin-top: 15rpx;
+  text-decoration: underline;
+}
+.head_my{
+  width: 95%;
+  margin-left: 5%;
+  font-size: 28rpx;
+  color: #FFEFFF;
+  margin-top: 20rpx;
+}
+.head_money{
+  font-size: 100rpx;
+  color: #FEFFFE;
+}
+.head_bottom{
+  width: 97.5%;
+  padding-left: 2.5%;
+  margin-top: 80rpx;
+  height: 60rpx;
+  font-size: 20rpx;
+  color: #FFBAFD;
+  background-color: #DF65BA;
+  line-height: 60rpx;
+}
+.list{
+  width: 100%;
+  height: 100%;
+}
+.list_kuang{
+  width: 95%;
+  margin-left: 2.5%;
+  height: 200rpx;
+  background-color: white;
+  /* border: 1rpx solid black; */
+  margin-top: -390rpx;
+  border-radius: 30rpx;
+}
+.list_tit{
+  width: 90%;
+  margin-left: 5%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #5B5B5B;
+} 
+.list_money{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  /* border: 1rpx solid black;  */
+}
+.list_money_{
+  width: 50%;
+  margin-left: 3%;
+  color: #FFB940;
+  height: 120rpx;
+  font-size: 70rpx;
+  line-height: 120rpx;
+}
+.list_money_right{
+  width: 45%;
+  /* border: 1rpx solid black;  */
+}
+.list_tx{
+  width: 230rpx;
+  height: 80rpx;
+  border-radius: 38rpx;
+  line-height: 80rpx;
+  margin-left: 50rpx;
+  text-align: center;
+  color: #F8F8F8;
+  background-color: #B3B3B3;
+  font-size: 34rpx;
+}
+.list_text{
+  width: 100%;
+  text-align: center;
+  font-size: 22rpx;
+  color: white;
+  margin-top: 10rpx;
+}
+.text_cj{
+  width: 100%;
+  font-size: 26rpx;
+  color: #969696;
+  text-align: center;
+  margin-top: 280rpx;
+}

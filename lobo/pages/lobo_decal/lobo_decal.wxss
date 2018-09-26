@@ -1,0 +1,112 @@
+/* pages/lobo_decal/lobo_decal.wxss */
+page{
+  background-color: #E6E6E6;
+}
+.leave{
+  width: 100%;
+  height: 220rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+.leave_num{
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  background-color: #FF0000;
+  color: white;
+  margin-left: 20rpx;
+  margin-top: 50rpx;
+  font-size: 24rpx;
+  border-radius: 50%;
+}
+.exp{
+  width: 95%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  text-align: right;
+  background-color: white;
+  color: #555555;
+  font-size: 28rpx;
+}
+.div{
+  width: 95%;
+  margin-left: 2.5%;
+  /* border: 1rpx solid black; */
+}
+.title{
+  width: 90%;
+  font-size: 28rpx;
+  color: #454545;
+  margin-left: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.div_decal{
+  width: 100%;
+  background-color: white;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+.div_decal_top{
+  width: 95%;
+  margin-left: 2.5%;
+  height: 160rpx;
+  display: flex;
+  flex-direction: row;
+  /* border: 1rpx solid black; */
+}
+.div_decal_top_left{
+  height: 130rpx;
+  width: 130rpx;
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+  border-radius: 50%;
+  /* border: 1rpx solid black; */
+}
+.div_decal_top_cen{
+  width: 60%;
+  margin-left: 20rpx;
+  height: 130rpx;
+  margin-top: 10rpx;
+  /* border: 1rpx solid black; */
+}
+.name{
+  height: 60rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #484848;
+}
+.div_bottom{
+  width: 100%;
+  display: flex;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  flex-direction: row;
+  flex-wrap: wrap;
+   background-color: white;
+}
+.color{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  /* border: 1rpx solid black; */
+}
+.img{
+    border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.imgs_text{
+  font-size: 24rpx;
+  color: #E6E6E6;
+  height: 120rpx;
+  text-align: center;line-height: 120rpx;
+  position: relative;
+  margin-top: -120rpx;
+}

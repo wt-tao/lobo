@@ -1,0 +1,121 @@
+/* pages/add/add.wxss */
+.kuang_time{
+  width: 100%;
+  height: 250rpx;
+  /* border: 1rpx solid black; */
+  position: relative;
+  margin-top: -400rpx;
+  z-index: 1003;
+  color: white;
+  text-align: center
+}
+.time_day{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 90rpx;
+  margin-top: 50rpx; 
+}.time_days{
+  font-size: 26rpx;
+  margin-top: 20rpx;
+  line-height: 50rpx;
+}
+.div{
+  width: 100%;
+  height: 1600rpx;
+  /* border: 1rpx solid black; */
+  position: relative;
+  margin-top: -170rpx;
+  z-index: 1004;
+  background-color: #F2F2F2;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+}
+.img{
+  width: 120rpx;
+  position: fixed;
+  bottom: 50rpx;
+  left: 43%;
+  z-index: 9999;
+}
+.input{
+  width: 90%;
+  height: 100rpx;
+  margin-left: 5%;
+  margin-top: 60rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 50rpx;
+  /* border: 1rpx solid black; */
+}
+.input_{
+  width: 76%;
+  padding-left: 4%;
+  height: 80rpx;
+  margin-top: 10rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+.play{
+  margin-left: 5%;
+  font-size: 24rpx;
+  color: #1E1E1E;
+  margin-top: 70rpx;
+}
+.add_card_type_scroll-view{
+  width: 100%;
+  height: 150rpx;
+}
+.card_frame_bottom_img{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 30rpx;
+  margin-top: 25rpx;
+  display: inline-block;
+  /* border: 1rpx solid black; */
+}
+.text{
+  width: 87%;
+  margin-left: 5%;
+  height: 300rpx;
+  background-color: white;
+  margin-top: 10rpx;
+  border-radius: 30rpx;
+  padding-top: 30rpx;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  /* border: 1rpx solid black; */
+}
+.div_tp{
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* border: 1rpx solid black; */
+}
+.div_list{
+  width: 27%;
+  height: 170rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  /* border: 1rpx solid black; */
+  border-radius: 30rpx;
+}
+.address{
+   width: 90%;
+  margin-left: 5%;
+  height: 100rpx;
+  margin-top: 80rpx;
+  border-top: 1rpx solid #B4B4B4;
+  border-bottom: 1rpx solid #B4B4B4;
+  display: flex;
+  flex-direction: row;
+}
+.address_text{
+  margin-left: 30rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}

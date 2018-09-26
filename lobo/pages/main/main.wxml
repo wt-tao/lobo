@@ -1,0 +1,6 @@
+<!--pages/main/main.wxml-->
+<image src='../../img/zy-22.png' style='width:100%;height:1296rpx;'  class='img'></image>
+
+<!-- <view class='box1'></view> -->
+
+<image src='../../img/(bz).png' style='width:60%;margin-left:20%' mode='widthFix' class='index'> </image>

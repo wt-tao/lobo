@@ -1,0 +1,24 @@
+<view class='main' hidden='{{!timeHide}}' catchtap='cancelTap'>
+  <!-- <view class='main_bg' catchtap='mainBgTap'></view> -->
+  <view class='warp' catchtap='mainTap'>
+      <view class='warp_head'>
+          <text class='cancel_text' catchtap='cancelTap'>取消</text>
+          <text class='confirm_text' catchtap='confirmTap'>确定</text>
+      </view>
+      <picker-view class='picker_box' value="{{value}}" bindchange="bindChange">
+        <picker-view-column>
+          <view wx:for="{{hours}}" wx:key='this' class='time_item'>{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{minute}}" wx:key='this' class='time_item'>{{item}}</view>
+        </picker-view-column>
+        <view class='to'>至</view>
+        <picker-view-column>
+          <view wx:for="{{hours}}" wx:key='this' class='time_item'>{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{minute}}" wx:key='this' class='time_item'>{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+  </view>
+</view>

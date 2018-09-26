@@ -1,0 +1,402 @@
+/* pages/rili/rili.wxss */
+page{
+  /* background: #f0c; */
+  width: 100%;
+  height: 100%;
+}
+.page_bg{
+  width: 100%;
+  height: 100%;
+}
+.main{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.head{
+  display: flex;
+  padding: 22rpx;
+  box-sizing: border-box;
+  padding-bottom: 0;
+}
+.head_left{
+  flex: 1;
+}
+.year_box{
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+  font-size: 32rpx;
+  color: #fff;
+}
+.goto{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+}
+.month_text{
+  line-height: 80rpx;
+  font-size: 42rpx;
+  color: #fff;
+}
+.icon_add{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 30rpx;
+}
+swiper,swiper-item{
+  width: 100%;
+  height: 490rpx;
+}
+.xingqi{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+}
+.xingqi_sub{
+  width: 100rpx;
+  height: 70rpx;
+  margin-left: 6rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 32rpx;
+}
+
+.date_box{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  
+}
+.date_sub{
+  width: 100rpx;
+  height: 70rpx;
+  margin-left: 6rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 32rpx;
+  color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.date_text{
+  width: 100rpx;
+  height: 70rpx;
+  position: absolute;
+}
+.convention_img{
+  width: 34rpx;
+  height: 46rpx;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin:auto;
+}
+.mark_img{
+  width: 52rpx;
+  height: 30rpx;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin:auto;
+}
+.today_icon{
+  width: 55rpx;
+  height: 55rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin:auto;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 3px 3px 10px #666;
+  
+}
+.picker_box{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 500rpx;
+}
+
+.zhi{
+  width:150rpx;
+  line-height:500rpx;
+  height:300rpx;
+  text-align:center;
+}
+
+.summary_box{
+  margin-top: 30rpx;
+  padding: 15rpx 25rpx;
+  background: #fff;
+  border-radius: 30rpx 30rpx 0 0;
+  height: 90rpx;
+  border-bottom: 1px solid #ccc;  
+  display: flex;
+}
+.summary_left{
+  width:260rpx;
+  box-sizing: border-box;
+  padding-left: 70rpx;
+}
+.summary_hint{
+  font-size: 24rpx;
+  display: block;
+  line-height: 40rpx;
+  /* text-align:center; */
+  color: #ccc;
+}
+.day_num{
+  font-size: 40rpx;
+  line-height: 50rpx;
+}
+.day_e{
+  font-size: 26rpx;
+  color: #aaa;
+  margin-left: 20rpx; 
+}
+.summary_center{
+  flex: 1;
+  height: 15rpx;
+  background: #e7e7e7;
+  border-radius: 10rpx;
+}
+.summary_rigth{
+  width: 230rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filtrate_box{
+  height: 40rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  background: #afafaf;
+}
+
+.select_box{
+  /* background: #fff;
+  width: 80%;
+  margin: 30rpx auto; */
+  height: 40rpx;
+  width: 120rpx;
+  border-radius: 20rpx;
+  background: #afafaf;
+  position: relative;
+}
+.select{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  /* border:1px solid #efefef; */
+  /* border-radius: 8rpx; */
+  display: flex;
+  align-items: center;
+  padding: 0 5rpx;
+}
+.select_text{
+  font-size: 26rpx;
+  flex: 1;
+  color: #fff;
+  text-align: center;
+}
+.select_img{
+  width: 30rpx;
+  height: 30rpx;
+  
+  display: block;
+  transition:transform 0.3s;
+}
+.select_img_rotate{
+  transform:rotate(180deg); 
+}
+.option_box{
+  position: absolute;
+  top: 40rpx;
+  width: 100%;
+  border:1px solid #efefef;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+}
+.option{
+  display: block;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+}
+
+.event_list{
+  display: flex;
+  height: 120rpx;
+  padding: 10rpx 0;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  background: #fff;
+}
+.event_left{
+  text-align: center;
+  width: 260rpx;
+}
+.event_day,.event_date{
+  display: block;
+  font-size: 26rpx;
+  line-height: 46rpx;
+  color: #333;
+}
+.event_date{
+  font-size: 28rpx;
+  color: #999;
+}
+.icon_box{
+  width: 60rpx;
+  margin-left:40rpx;
+  margin-right:20rpx;
+}
+.foot_icon{
+  width: 34rpx;
+  height: 46rpx;
+  margin: 0 auto;
+  display: block;
+  /* padding: 0 9rpx; */
+}
+.flags_icon{
+  width: 52rpx;
+  height: 30rpx;
+  margin: 0 auto;
+  display: block;
+}
+.foot_icon1{
+  width: 34rpx;
+  height: 46rpx;
+  display: block;
+}
+.flags_icon1{
+  width: 52rpx;
+  height: 30rpx;
+  display: block;
+}
+.event_right{
+  flex: 1;
+  color: #333;
+}
+.event_name,.event_content{
+  display: block;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+.event_content{
+  font-size: 22rpx;
+  color: #666;
+}
+.dialog{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+.dialog_main{
+  width: 650rpx;
+  height: 1050rpx;
+  position: relative;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 45rpx;
+  box-sizing: border-box;
+}
+.dialog_bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.dialog_main_bg{
+  width: 442rpx;
+  height: 438rpx;
+  position: absolute;
+  right: 0;
+  top:0;
+}
+.dialog_warp{
+  position: absolute;
+  z-index: 1;
+  width: 560rpx;
+  height: auto;
+}
+.title_input{
+  height: 60rpx;
+  font-size: 32rpx;
+  /* background: #ffc; */
+  border-bottom: 1px solid #999;
+  padding: 15rpx;
+}
+.content_input{
+  height: 280rpx;
+  padding: 15rpx;
+  /* background: #fcf; */
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  border-bottom: 1px solid #999;
+}
+.list_view{
+  display: flex;
+  height: 90rpx;
+  border-bottom:1px solid #999;
+  align-items: center;
+  font-size: 32rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+.goto_icon{
+  width: 42rpx;
+  height: 42rpx;
+}
+.list_content{
+  flex: 1;
+  text-align: right;
+  margin-right: 20rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+.qita{
+  display: flex;
+  justify-content: flex-end;
+}
+.icon_ling{
+  width: 37rpx;
+  height: 45rpx;
+  margin-right: 15rpx;
+}
+.save_icon{
+  width: 115rpx;
+  height: 114rpx;
+  display: block;
+  margin:30rpx auto;
+}

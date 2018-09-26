@@ -1,0 +1,24 @@
+<!--pages/lobo_news/lobo_news.wxml-->
+<image src='../../img/1bg.png' class='img' mode='widthFix'></image>
+
+<view class='div'>
+    <view class='tit'>
+        <view class='news_tit'>消息列表</view>
+        <!-- <view class='news_tit news_bj' >全部标记已读</view> -->
+    </view>
+    <view class='div_list' wx:for='{{listArray}}'>
+      <view class='dis_lis'>
+        <view class='imgs'>
+            <image src='../../img/zy_19.png' style='width:20rpx;' mode='widthFix'/>
+        </view>
+        <view class='div_details'>{{item.content}}</view>
+      </view>
+      <view class='div_time'>{{item.createTime}}</view>
+      <view style='height:20rpx;width:100%;'></view>
+      <view style='height:20rpx;background-color: #F2F2F2;width:100%'></view>
+    </view>
+
+  
+</view>
+
+<view class='tex'>没有更多数据</view>

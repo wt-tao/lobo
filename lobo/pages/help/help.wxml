@@ -1,0 +1,45 @@
+<!--pages/help/help.wxml-->
+<view class='help_tit'>常见问题</view>
+<view class='help'>
+  <view class='help_con'>
+      <view class='help_img'>
+        <image src='../../img/tc-632.png' style='width:100%;' mode='widthFix'></image>
+      </view>
+      <view class='help_text' id='{{faq[0].id}}' bindtap='qa'>{{faq[0].title}}</view>
+  </view>
+   <view class='help_con'>
+      <view class='help_img'>
+        <image src='../../img/tc-630.png' style='width:100%;' mode='widthFix'></image>
+      </view>
+      <view class='help_text' id='{{faq[1].id}}' bindtap='qa'>{{faq[1].title}}</view>
+  </view>
+   <view class='help_con'>
+      <view class='help_img'>
+        <image src='../../img/tc-628.png' style='width:100%;' mode='widthFix'></image>
+      </view>
+      <view class='help_text' id='{{faq[2].id}}' bindtap='qa'>{{faq[2].title}}</view>
+  </view>
+</view>
+
+<view class='help_tit'>其他问题</view>
+<view class='help'>
+    <view class='help_con' style='display: flex;flex-direction: row;' >
+        <view class='help_problem' wx:for='{{oaq}}'>
+          <view class='help_left' bindtap='qa' id='{{item.id}}'>
+              <view class='help_left_top'>{{item.title}}</view>
+              <view class='help_left_bottom'>{{item.summary}}</view>
+          </view>
+          <view class='help_right'>
+              <image src='../../image/(lj)4.png' style='width:30rpx;height:40rpx;margin-top:30rpx;margin-left:30rpx;'></image>
+          </view>
+        </view>
+    
+  </view>
+
+</view>
+
+<view class='help_cons' bindtap='feedback'>
+  <image src='../../img/tc-146 (4).png' style='width:60rpx;margin-top:20rpx;' mode='widthFix'></image>
+  <view style='margin-left:30rpx;font-size:24rpx;'>还没找到答案？问题反馈</view>
+  <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:30rpx;margin-left:280rpx;' mode='widthFix'></image>
+</view>

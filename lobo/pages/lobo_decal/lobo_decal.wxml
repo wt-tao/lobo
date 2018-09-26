@@ -1,0 +1,52 @@
+<!--pages/lobo_decal/lobo_decal.wxml-->
+<view class='leave'>
+    <image src='{{img==""?url+decal.currentLevelLogoImgUrl:img}}' style='width:35%;margin-top:70rpx;margin-left:32.5%' mode='widthFix' wx:if='{{decal.currentLevelLogoImgUrl!=null}}'></image>
+    <image src='{{img==""?"../../img/zy_2@3x.png":img}}' style='width:35%;margin-top:70rpx;margin-left:32.5%' mode='widthFix'
+    wx:if='{{decal.currentLevelLogoImgUrl==null}}'></image>
+    <view class='leave_num'>{{decal.level}}</view>
+
+</view>
+<view class='exp'>{{decal.expGet}}/{{decal.expNeed}}</view>
+<progress color='#FF0000' percent='{{exp}}' active backgroundColor='#CCCCCC' stroke-width='6'></progress>
+<view class='exp' style='font-size:22rpx;background-color: #E6E6E6;'>剩余解锁{{decal.leftUnlockTime}}次</view>
+<view class='div' wx:for='{{decal.levelLogoThemeList}}'>
+    <view class='title'>lobo贴纸（{{decal.totalColorUnlocked}}/{{decal.totalColor}}）</view>
+    <view class='div_decal'>
+        <view class='div_decal_top'>
+            <!-- 图片 -->
+            <view class='div_decal_top_left'>
+                <image src='{{url}}{{item.coverImg}}' style='width:100%;' mode='widthFix' class='img'></image>
+            </view>
+            <!-- 名字 -->
+            <view class='div_decal_top_cen'>
+                <view class='name'>{{item.name}}</view>
+                 <view class='name' style='font-size:24rpx;color:#AAAAAA;line-height: 50rpx;'>已有{{item.collectedUserCount}}人集齐</view>
+            </view>
+            <image src='../../image/goto1.png' style='width:30rpx;margin-left:30rpx;margin-top:60rpx;' mode='widthFix'></image>
+        </view>
+    </view>
+    <view class='div_bottom'>
+        <view class='color' wx:for='{{item.levelLogoAndColorList}}' wx:for-item='key'>
+        <!--status=0:不可解锁
+            status=1：可解锁
+          -->
+          <!-- 已经解锁 -->
+           <view class='imgs' wx:if='{{key.client_status==1}}' bindtap='tap1' id='{{url}}{{key.levelLogoImg}}' bindtouchstart="touchStart" bindtouchend="touchEnd" data-id='{{key.id}}'>
+            <image src='{{url}}{{key.colorImg}}'  style='width:100%;' mode='widthFix' class='img' ></image>
+            <view class='imgs_text'></view>
+          </view>
+          <!-- 可解锁 -->
+          <view class='imgs' wx:if='{{key.client_status==2}}'  bindtap='tap'  bindtouchstart="touchStart" bindtouchend="touchEnd" id='{{url}}{{key.levelLogoImg}}' data-id='{{key.id}}' >
+            <image src='{{url}}{{key.colorImg}}' style='width:100%;' mode='widthFix' class='img' ></image>
+            <view class='imgs_text'>可解锁</view>
+          </view>
+          <!-- 不可解锁 -->
+           <view class='imgs' wx:if='{{key.client_status==4}}' bindtap='taps' id='{{url}}{{key.levelLogoImg}}'>
+            <image src='{{url}}{{key.colorImg}}'  style='width:100%;' mode='widthFix' class='img' ></image>
+            <view class='imgs_text'>不可解锁</view>
+          </view>
+            <!-- <image src='{{url}}{{item.colorImgGrey}}' wx:if='{{item.status==0}}' style='width:100%;' mode='widthFix' class='img'></image> -->
+        </view>
+
+    </view>
+</view>

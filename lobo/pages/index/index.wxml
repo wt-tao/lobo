@@ -1,0 +1,334 @@
+<!--index.wxml-->
+<!-- <block wx:if='{{show==1}}'> -->
+<view hidden='{{so1}}'>
+<image src='../../img/zy-22.png' style='width:100%;height:1296rpx;'  class='img'></image>
+<view class='page'>
+    <view class='my_head'>
+      <view class='mt_headImg'>
+        <image src='../../img/(bz)1a.png' style='width:100%;height:100%'/>
+      </view>
+    </view>
+
+    <view class='my_head' style='height:130rpx;margin-top:30rpx;'>
+        <view class='my_head_jt'>
+            <image src='../../img/tc-190.png' style='width:100%;' mode='widthFix'/>
+        </view>
+    </view>
+
+    <view class='my_head' style='height:140rpx;margin-top:40rpx;'>
+      <view class='mt_headImg' style='height:140rpx;width:140rpx'>
+        <image src='{{url}}{{head_img==""?head_Img:head_img}}' style='width:100%;height:100%'/>
+      </view>
+    </view>
+
+    <view class='text5'>你还处于单身状态，请绑定用户</view>
+    </view>
+</view>
+
+<view hidden='{{so2}}'>
+    <image src='../../img/bg1.png' style='width:100%; height:550rpx;' />
+<view class='head'>
+  <view class='head_top'>
+    <image src='../../img/(bz).png' style='width:20%;margin-top:30rpx;margin-left:20rpx;' mode='widthFix'/>
+      <button plain open-type='share' style='width:180rpx;margin-top:10rpx;margin-left:380rpx;border:none'>
+        <image src='../../img/zy_14.png' style='width:50%;margin-left:80rpx;' mode='widthFix'/>
+    </button>
+  </view>
+  <view class='head_img'>
+    <view class='head_img_tc'>
+        <image src="{{url}}{{head.user1Img==''?head_img:head.user1Img}}"  class='imgs' style='width:100%;height:100%' mode='aspectFill'/>
+    </view>
+  </view>
+
+  <view class='head_not'>
+    <view class='head_not_text'> 未 绑 定 </view>
+    <text class='text1' style='color:#A1A1A1'>0</text>
+  </view>
+
+  <view class='head_nots ead_not' style='font-size:18rpx; text-align: center;margin-top:10rpx;'>你还处于单身状态，无法使用部分功能，请绑定用户</view>
+</view>
+
+<view class='home_center'>
+  <view class='home_center_top'>
+      <view class='home_center_top_list'  bindtap='lobo_celandar'>
+          <view class='love_time'>恋爱时长</view>
+          <view class='love_time'><text style='font-size:50rpx;color:#010101'>00</text>　天</view>
+          <view class='love_time'>距离下一个纪恋日<text style='color:#010101'>*</text>天</view>
+      </view>
+      <view class='home_center_top_list' style='border:none;' bindtap='lobo_task'>
+          <view class='love_time' style='margin-left:60rpx'>账户总额</view>
+          <view class='love_time' style='margin-left:60rpx'><text style='font-size:50rpx;color:#010101'>0.00</text>　元</view>
+          <view class='love_time' style='margin-left:60rpx'>今日净增长<text style='color:#010101'>0.00</text>元</view>
+      </view>
+  </view>
+  <view class='progress'>
+    <progress  percent='0' stroke-width='16' active color="#E7E7E7" style='border-radius:100rpx;overflow:hidden'></progress>
+  </view>
+</view>
+
+<view class='news'>
+  <image src='../../img/tc-466.png' style='width:20rpx;margin-top:15rpx;margin-left:30rpx;' mode='widthFix'/>
+  <text style='color:#4C4D48;font-size:30rpx;margin-left:15rpx;margin-top:20rpx;'>lobo咨迅（推荐）</text>
+</view>
+
+<view class='news_div' wx:for='{{lineList}}' bindtap='lobo_information_detali' id='{{item.id}}'>
+  <view class='news_div_top'>
+      <view class='news_tb'>
+          <image src='{{url}}/img/lobo/1x.png' style='width:100%' mode='widthFix'></image>
+      </view>
+      <view class='news_name'>lobo联盟</view>
+      <view class='news_time'>{{item.createTime}}</view>
+  </view>
+  <view class='naws_title'>{{item.title}}</view>
+  <text class='news_count'>{{item.topic}}</text>
+  <view style='height:20rpx;width:100%'></view>
+</view>
+
+<view style='height:100rpx;width:100%'></view>
+</view>
+
+
+<!-- 瞬间 -->
+<view hidden='{{so3}}'>
+<scroll-view style='height:1216rpx;' scroll-y bindscrolltolower='loading'>
+<image src='../../img/bg2.png' style='width:100%;height:297rpx;'  />
+<view class='head1'>
+  <view class='hello'>
+    <view class='hello_tit'>你好，{{cardHead.nickname}}</view>
+    <image src='../../img/tc-183.png' style='width:90rpx;margin-top:-30rpx;margin-left:50rpx;' mode='widthFix' />
+  </view>
+  <view class='list1'>
+    <view class='list_left'>
+      <view class='list_left_wz'>decal</view>
+    </view>
+    <view class='list_right'>
+        <view class='list_right_top'>00天</view>
+        <view class='list_right_bottom'>恋爱时长</view>
+    </view>
+    <view class='list_right'>
+        <view class='list_right_top'>0</view>
+        <view class='list_right_bottom'>爱情瞬间</view>
+    </view>
+      <view class='list_right'>
+        <view class='list_right_top'>0</view>
+        <view class='list_right_top' style='color: #5B5B5B;font-size: 20rpx;line-height: 20rpx;height:50rpx;'>分享</view>
+    </view>
+  </view>
+</view>
+<view class='tit'>
+    <view class='all'>全部 ></view>
+    <view class='all_tb'>
+        <image src='{{url}}/img/userCenterIcon/(bz)b2 (2).png' style='width:60rpx;margin-left:50rpx;' mode='widthFix'/>
+        <image src='{{url}}/img/userCenterIcon/(bz)b2 (1).png' style='width:60rpx;margin-left:20rpx;' mode='widthFix'/>
+    </view>
+</view>
+
+<image src='../../img/tc-106.png' style='width:600rpx;margin-left:70rpx;margin-top:100rpx;' mode='widthFix'/>
+<view class='text'>你还处于单身状态，无法使用部分功能，请绑定用户</view>
+</scroll-view>
+</view>
+
+
+<!-- 个人中心 -->
+<view hidden='{{so4}}'>
+    <image src='../../img/1-02_03.jpg' style='width:100%;' mode='widthFix'/>
+
+<view class='user_head' >
+  <view class='user_news'>
+    <view class='yuan' bindtap='user_detail'>
+      <!-- <view class="wrap">  -->
+        <!-- <view class="top" bindtap='ca'> 
+          <canvas class="cir" style="width:180rpx; height:180rpx;" canvas-id="canvasArc"> 
+          </canvas>      
+          <!-- <view class="cc">中间</view>  
+        </view> -->
+        <!-- </view>  -->
+        <image src='{{url}}{{my.me_head_img==""?head_Img:my.me_head_img}}' style='width:100%;height:100%' mode='aspectFill'  class='imgsss'></image>
+    </view>
+
+    <view class='right'>
+        <view class='right_top'>0</view>
+        <view class='right_center'>
+            <view class='right_name' bindtap='user_detail'>
+                <view class='right_name_'>{{my.me_nickname}}</view>
+                <view class='right_card'>{{my.me_no}}</view>
+            </view>
+            <view class='tis'>你还处于单身状态，请绑定用户</view>
+            <button plain='true' open-type='share' style='width:100rpx;border:none'>
+            <image src='../../img/(bz)1aa.png' style='width:80rpx;margin-top:20rpx;margin-left:-20rpx;' mode='widthFix'/>
+            </button>
+        </view>
+    </view>
+  </view>
+  <view class='tb'>
+      <view class='tb_list' bindtap='lobo_news'>
+          <view class='tb_list_img'  >
+            <image src='../../img/c1.png' style='width:70%;margin-top:25rpx;margin-left:27rpx;z-index:1001;position: relative;' mode='widthFix'/>
+            <view class='diand' wx:if='{{head.newMessage!=""}}'></view>
+          </view>
+          <view class='tb_list_text'>我的消息</view>
+      </view>
+       <view class='tb_list' bindtap='money'>
+          <view class='tb_list_img'>
+            <image src='../../img/(bz)2.png' style='width:60%;margin-top:20rpx;margin-left:23%' mode='widthFix'/>
+            <!-- <view class='diand' style='left:-2rpx;'></view> -->
+          </view>
+          <view class='tb_list_text'>lobo钱包</view>
+      </view>
+       <view class='tb_list' bindtap='record'>
+          <view class='tb_list_img'>
+            <image src='../../img/(bz)3.png' style='width:70%;margin-top:30rpx;margin-left:18%' mode='widthFix'/>
+            <!-- <view class='diand' style='left:-2rpx;'></view> -->
+          </view>
+          <view class='tb_list_text'>传音记录</view>
+      </view>
+       <view class='tb_list' bindtap='lobo_union'>
+          <view class='tb_list_img'>
+            <image src='../../img/(bz)4.png' style='width:55%;margin-top:20rpx;margin-left:25%' mode='widthFix'/>
+            <!-- <view class='diand' style='left:-2rpx;'></view> -->
+          </view>
+          <view class='tb_list_text'>lobo联盟</view>
+      </view>
+  </view>
+</view>
+<!-- 新用户提示 -->
+<!-- <block > -->
+<block wx:if='{{my.userInfoCompletionProgress!=4}}'>
+  <image src='../../img/c2.png'  style='width:95%;margin-left:2.5%;margin-top:-10rpx;' mode='widthFix'/>
+  <view class='jigao'>
+        <view class='jigao_top'>
+            <view class='jigao_top_img'>
+                <image src='../../img/(bz)5.png' style='width:100%;margin-top:10rpx;' mode='widthFix'/>
+            </view>
+            <view class='jigao_auto'>
+                <view class='jigao_auto_top'>请尽快完成您的身份信息</view>
+                <view class='jigao_auto_tops'>身份信息不完整，会影响使用哦~</view>
+            </view>
+
+            <view class='bottom' wx:if='{{my.userInfoCompletionProgress ==1}}' bindtap='user_detail'>完善信息</view>
+            <view class='bottom' wx:elif='{{my.userInfoCompletionProgress ==2}}' bindtap='lobo_password'>隐私密码</view>
+            <view class='bottom' wx:elif='{{my.userInfoCompletionProgress ==3}}'>完成绑定</view>
+        </view> 
+        <view class='jigao_buttom'>
+            <view class='jigao_buttom_list'>
+              <view class='jigao_buttom_number' style='{{my.userInfoCompletionProgress!=1?"background-color: #35AE47":""}}'>1</view>
+              <view class='jigao_buttom_text'>完善信息</view>
+            </view>
+            <view class='jigao_buttom_list'>
+              <view class='jigao_buttom_number' style='{{my.userInfoCompletionProgress==3||my.userInfoCompletionProgress==4?"background-color: #35AE47":""}}'>2</view>
+              <view class='jigao_buttom_text'>隐私密码</view>
+            </view>
+            <view class='jigao_buttom_list'>
+              <view class='jigao_buttom_number' style='{{my.userInfoCompletionProgress==4||my.userInfoCompletionProgress==2?"background-color: #35AE47":""}}'>3</view>
+              <view class='jigao_buttom_text'>绑定对象</view>
+            </view>
+            <view class='jigao_buttom_list'>
+              <view class='jigao_buttom_number'>4</view>
+              <view class='jigao_buttom_text'>开始使用</view>
+            </view>
+        </view>
+  </view>
+</block>
+
+<view class='list' style='margin-top:20rpx;' >
+    <view class='list_com' bindtap='card_voucher'>
+        <view class='list_img'>
+            <image src='{{url}}/img/userCenterIcon/tc-146 (6).png' style='width:100%;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>卡券</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:460rpx;' mode='widthFix' />
+    </view>
+     <view class='list_com' bindtap='lobo_task'>
+        <view class='list_img'>
+            <image src='{{url}}/img/userCenterIcon/tc-146 (3).png' style='width:100%;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>任务</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:460rpx;' mode='widthFix' />
+    </view>
+       <view class='list_com' bindtap='lobo_celandar'>
+        <view class='list_img'>
+            <image src='{{url}}/img/userCenterIcon/tc-146 (1).png' style='width:100%;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>安排</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:460rpx;' mode='widthFix' />
+    </view>
+      <view class='list_com' bindtap='lobo_marry'>
+        <view class='list_img'>
+            <image src='{{url}}/img/userCenterIcon/(bz555).png' style='width:100%;margin-top:5rpx;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>结婚提现</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:400rpx;' mode='widthFix' />
+    </view>
+       <view class='list_com' bindtap='lobo_history'>
+        <view class='list_img'>
+            <image src='{{url}}/img/userCenterIcon/tc-146 (7).png' style='width:100%;margin-top:10rpx;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>绑定历史</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:400rpx;' mode='widthFix' />
+    </view>
+</view>
+
+<view class='list' style='margin-top:10rpx;'>
+    <view class='list_com' bindtap='lobo_password'>
+        <view class='list_img'>
+            <image src='{{url}}/img/userCenterIcon/tc-146 (2).png' style='width:100%;margin-top:5rpx;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>隐私密码</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:400rpx;' mode='widthFix' />
+    </view>
+     <view class='list_com' bindtap='help'>
+        <view class='list_img'>
+            <image src='{{url}}/img/userCenterIcon/tc-146 (5).png' style='width:100%;margin-top:7rpx;' mode='widthFix'/>
+        </view>
+        <view class='list_text' >客服中心</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:400rpx;' mode='widthFix' />
+    </view>
+       <view class='list_com' bindtap='lobo_about'>
+        <view class='list_img'>
+            <image src='{{url}}/img/userCenterIcon/tc-146 (4).png' style='width:100%;margin-top:7rpx;' mode='widthFix'/>
+        </view>
+        <view class='list_text'>关于</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-top:25rpx;margin-left:460rpx;' mode='widthFix' />
+    </view>
+      
+</view>
+<view style='height:100rpx;width:100%;'></view>
+
+
+<view class="bg"  style='display:{{display}}' bindtap='display'></view>
+<!-- <view class='sure' catchtap='hideview' style='display:{{display}}'>确定</view> -->
+<view class="show"  style='display:{{display}}'>
+    <view class='show1'>
+        <view class='div_input'>
+            <input class='inputs' type='password' value='{{password}}' placeholder='请输入隐私密码...' placeholder-style='color:#939393;font-size:22rpx;' bindinput='password'/>
+        </view>
+        <view class='div_imgs'>
+          <image src='../../img/tc-592.png' style='width:130rpx;z-index:1001;' mode='widthFix'></image>
+          <image src='../../img/tc-542.png' style='width:150rpx;' mode='widthFix' class='imgss' bindtap='sures'></image>
+        </view>
+                    <!-- <image src='../../img/tc-542.png' style='width:190rpx;' mode='widthFix' class='imgss'></image> -->
+    </view>    
+</view>
+</view>
+
+
+
+
+
+
+  <view class='dibu'>
+      <view class='dibu_div'>
+          <view class='dibu_div_com' bindtap='lobo_main'>
+            <image src='{{show==1?"../../img/zy_16.png":show==2||show==3||show==4?"../../img/zy_18.png":"../../img/d2.png"}}' style='width:40rpx;margin-left: 25rpx;margin-top:5rpx;' mode='widthFix'/>
+          </view>
+          <view class='dibu_div_com' bindtap='lobo_home_page'>
+            <image src='{{show==2?"../../img/zy_19.png":show==1?"../../img/d2.png":"../../img/zy_18.png"}}' style='width:40rpx;margin-left: 25rpx;margin-top:5rpx;' mode='widthFix'/>
+          </view>
+          <view class='dibu_div_com' bindtap='lobo_Instantaneous'>
+            <image src='{{show==3?"../../img/zy_19.png":show==1?"../../img/d2.png":"../../img/zy_18.png"}}' style='width:40rpx;margin-left: 25rpx;margin-top:5rpx;' mode='widthFix'/>
+          </view>
+          <view class='dibu_div_com' bindtap='lobo_uesr'>
+            <image src='{{show==4?"../../img/zy_19.png":show==1?"../../img/d2.png":"../../img/zy_18.png"}}' style='width:40rpx;margin-left: 25rpx;margin-top:5rpx;' mode='widthFix'/>
+          </view>
+      </view>
+    </view>

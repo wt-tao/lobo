@@ -1,0 +1,69 @@
+{
+  "pages":[
+    
+    "pages/main/main",
+    "pages/lobo_main/lobo_main",
+    "pages/lobo_uesr/lobo_uesr",
+    "pages/index/index",
+    "pages/lobo_password/lobo_password",
+    "pages/lobo_decal/lobo_decal",
+    "pages/user_detail/user_detail",
+    
+    "pages/not_uesr/not_uesr",
+    "pages/lobo_unbind/lobo_unbind",
+    
+    "pages/lobo_celandar/lobo_celandar",
+    "pages/lobo_history/lobo_history",
+    "pages/detailed/detailed",
+    "pages/lobo_Instantaneous/lobo_Instantaneous",
+    "pages/add/add",
+    
+    
+    "pages/lobo_news/lobo_news",
+    
+    "pages/lobo_home_page/lobo_home_page",
+    "pages/home_page/home_page",
+    
+    "pages/lobo_Instantaneous_detail/lobo_Instantaneous_detail",
+    
+   
+    "pages/lobo_put_forward/lobo_put_forward",
+    
+    "pages/lobo_money/lobo_money",
+    "pages/lobo_task/lobo_task",
+    
+    
+    
+    
+    "pages/lobo_information_detali/lobo_information_detali",
+    
+    
+    "pages/lobo_history_details/lobo_history_details",
+    
+    "pages/money/money",
+    
+    "pages/Instantaneous/Instantaneous",
+    "pages/lobo_help_details/lobo_help_details",
+    "pages/lobo_help_feedback/lobo_help_feedback",
+    
+
+    
+    "pages/about/about",
+    "pages/help/help",
+    
+    
+    "pages/lobo_record/lobo_record",
+    
+    "pages/lobo_marry/lobo_marry",
+    "pages/lobo_union/lobo_union",
+    
+    
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "lobo",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,5 @@
+<!--pages/lobo_help_details/lobo_help_details.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class='kuang'>
+    <template is="wxParse" data="{{wxParseData:da.nodes}}"/> 
+</view>

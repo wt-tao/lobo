@@ -1,0 +1,14 @@
+<!--pages/detailed/detailed.wxml-->
+<view class='tit'>明细记录</view>
+
+<view class='list' wx:for='{{listArray}}'>
+    <view class='list_name'>{{item.taskName}}</view>
+    <view class='list_right'>
+        <view class='list_time'>{{item.createTime}}</view>
+        <view class='list_number' style='color:#804190' wx:if='{{item.amount<0}}'>{{item.amount}}</view>
+        <view class='list_number' style='color:#FDB139' wx:if='{{item.amount>0}}'>+{{item.amount}}</view>
+    </view>
+</view>
+
+
+<view class='not'>没有更多数据</view>

@@ -1,0 +1,39 @@
+<!--pages/lobo_Instantaneous_detail/lobo_Instantaneous_detail.wxml-->
+<image  src='{{url}}{{card.imgs[0]}}' style='width:100%;height:250rpx;' mode='aspectFill'/>
+<button plain='true' style='border:none' open-type='share'>
+  <image src='../../img/zy_52.png' mode='widthFix' class='fx'/>
+</button>
+<view class='title'>{{card.title}}</view>
+<view class='title time'><text style='color:#90DEFF'>{{card.country}}{{card.city}}</text>　{{card.create_time}}　<text style='font-size:20rpx;color:#BFBFBF' bindtap='dele' id='{{card.id}}'>　删除 </text></view>
+
+<view class='title' style='margin-top:20rpx;font-size:26rpx;color:#4B4B4B'>{{card.content}}</view>
+
+<view class='imgs'>
+    <view class='imgs_list' wx:for='{{card.imgs}}' wx:for-item='key'>
+      <image src='{{url}}{{key}}' style='width:100%;height:100%;border: 1rpx solid #D1D1D1' mode='aspectFill' ></image>
+    </view>
+
+</view>
+
+<block wx:for='{{replyList}}'>
+    <view class='tx'  wx:if='{{item.user_id!=user_id}}'>
+        
+        <image src='{{url}}{{item.head_img==""?head_img:item.head_img}}' class='imgst' mode='aspectFill'></image>
+        <image src='../../img/zy_33 (2).png' style='width:70%;margin-left:20rpx;' mode='widthFix'></image>
+        <view class='img_text' style='margin-left:-69%;'>{{item.content}}</view>
+    </view>
+      <view class='tx' wx:if='{{item.user_id == user_id}}'>
+        <image src='../../img/zy_33 (1).png' style='width:70%;margin-left:100rpx;' mode='widthFix'></image>
+        <image src='{{url}}{{item.head_img==""?head_img:item.head_img}}' class='imgst' style='margin-left:40rpx;' mode='aspectFill'></image>
+        
+        <view class='img_text' style='margin-left:-86%;width:61%;text-align: right;'>{{item.content}}</view>
+    </view>
+</block>
+    <view style='height:120rpx;width:100%;'></view>
+    <view class='bottom'>
+        <view class='yuying'>
+            <image src='../../img/zy_59.png' style='width:30rpx;height:30rpx;margin-left:15rpx;margin-top:15rpx'></image>
+        </view>
+        <input class='input' bindinput='content' value='{{content}}' style='padding-left:10rpx;'></input>
+        <image src='../../img/zy_53.png' style='width:130rpx;margin-left:10rpx;margin-top:-3rpx;' mode='widthFix' bindtap='Send'></image>
+    </view>

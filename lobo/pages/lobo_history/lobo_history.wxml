@@ -1,0 +1,28 @@
+<!--pages/lobo_history/lobo_history.wxml-->
+<view class='div' wx:for='{{listArray}}'>
+    <view class='div_img'>
+        <image src='{{url}}{{item.user2_head_img==""?head_img:item.user2_head_img}}' style='width:100%;height:100%' mode='aspectFill' class='imgsss'></image>
+    </view>
+    <view class='time'>
+        <view class='begTime'>绑定于{{item.pairDate}}</view>
+        <view class='begTime' style='margin-top:10rpx;'>{{item.breakDate==null?"至今":"解绑于"+item.breakDate}}</view>
+    </view>
+    <image src='../../img/tc-670.png' style='width:150rpx;margin-left:85rpx;' mode='widthFix'></image>
+    <image src='../../img/(lj)4.png' style='width:20rpx;' mode='widthFix' class='imgs' id='{{item.pair_no}}' bindtap='lobo_history_details'></image>
+</view>
+<!-- <view class='div'>
+    <view class='div_img'></view>
+    <view class='time'>
+        <view class='begTime'>绑定于2017年6月21日</view>
+        <view class='begTime' style='margin-top:10rpx;'>绑定于2017年6月21日</view>
+    </view>
+    <image src='../../img/tc-670.png' style='width:150rpx;margin-left:85rpx;' mode='widthFix'></image>
+    <image src='../../img/(lj)4.png' style='width:20rpx;' mode='widthFix' class='imgs' bindtap='lobo_history_details'></image>
+</view> -->
+
+<view class='gd'>没有更多绑定</view>
+<view class='gb' style='margin-top:20rpx;'>
+      <view class='imgss'>
+        <image src='../../img/tc-146 (7).png' style='width:60rpx;' mode='widthFix'></image>
+      </view>
+</view>

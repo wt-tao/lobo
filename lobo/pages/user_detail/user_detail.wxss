@@ -1,0 +1,86 @@
+/* pages/user_detail/user_detail.wxss */
+page{
+  background-color: #F2F2F2;
+}
+.list{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #D1D1D1;
+  background-color: white;
+}
+.imgs{
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.list_name{
+  margin-left: 30rpx;
+  height: 200rpx;
+  line-height: 200rpx;
+  font-size: 28rpx;
+  color: #191919;
+}
+.list_names{
+  margin-left: 30rpx;
+  height: 100rpx;
+  width: 250rpx;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  color: #191919;
+}
+.list_tx{
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 25rpx;
+  margin-left: 60%;
+  border-radius: 50%;
+  /* border: 1rpx solid black; */
+}
+.list_text{
+  width:80%;
+  text-align: right;
+  font-size: 26rpx;
+  color: #8B8B8B;
+  height: 100rpx;
+  margin-left: 10rpx;
+  padding-left: 160rpx;
+  /* border: 1rpx solid black; */
+  line-height: 100rpx;
+}
+.list_texts{
+  position: relative;
+  width: 380rpx;
+  height: 80rpx;
+  margin-top: 10rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  color: #8B8B8B;
+  margin-left: 40rpx;
+  text-align: right;
+  /* border: 1rpx solid black; */
+}
+.tetx_wz{
+  width: 95%;
+  margin-left: 3%;
+  font-size: 20rpx;
+  color: #2E2E2E;
+  height: 40rpx;
+  line-height: 40rpx;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+}
+.saver{
+  width: 90%;
+  margin-left: 5%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 20rpx;
+  color: white;
+  background-color: #F371D2;
+  font-size: 30rpx;
+  margin-top: 50rpx;
+}

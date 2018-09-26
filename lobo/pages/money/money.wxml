@@ -1,0 +1,35 @@
+<!--pages/money/money.wxml-->
+<image src='../../img/tc-261.png' style='width:100%' mode='widthFix' />
+<view class='head'>
+    <view class='head_top'>明细</view>
+    <view class='head_my'>我们的余额（元）</view>
+    <view class='head_my head_money'>120.05</view>
+    <view class='head_bottom'>存入共同财产后，任何一方都有权利提出资产并转到个人微信钱包</view>
+</view>
+<view class='list'>
+  <view class='list_kuang'>
+      <view class='list_tit'>共同资产（元）</view>
+      <view class='list_money'>
+          <view class='list_money_'>101.03</view>
+          <view class='list_money_right'>
+              <view class='list_tx' style='background-color:white'>
+                  <image src='../../img/tc-254.png' style='width:260rpx;margin-left:-10rpx;margin-top:-10rpx;' mode='widthFix'></image>
+              </view>
+              <view class='list_text' style='text-decoration: underline;color:#FFE49D;font-size:24rpx;'>提现</view>
+          </view>
+      </view>
+  </view>
+
+    <view class='list_kuang' style='margin-top:20rpx;'>
+      <view class='list_tit'>lobo基金（元）</view>
+      <view class='list_money'>
+          <view class='list_money_' style='color:#BC7DB6'>101.03</view>
+          <view class='list_money_right'>
+              <view class='list_tx'>提 现</view>
+              <view class='list_text'>提现权限请到结婚提现中开通</view>
+          </view>
+      </view>
+  </view>
+</view>
+
+<view class='text_cj'>常见问题</view>

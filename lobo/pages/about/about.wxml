@@ -1,0 +1,10 @@
+<!--pages/about/about.wxml-->
+<view class='about'>
+    <view class='about_img'>
+      <image src='../../img/tc-550.png' style='width:100%;' mode='widthFix'></image>
+    </view>
+    <view class='about_text'>LOBO联盟 v1.0</view>
+</view>
+
+
+<view class='about_use'>使用条款和隐私政策</view>

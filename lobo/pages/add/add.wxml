@@ -1,0 +1,83 @@
+<!--pages/add/add.wxml-->
+<image src='../../img/zy_77.png' class='img' mode='widthFix' bindtap='add'></image>
+<image src='../../img/1-02_03.jpg' style='width:100%;' mode='widthFix'></image>
+  <view class='kuang_time'>
+      <view class='time_day'>{{day}}</view>
+      <view class='time_days' wx:if='{{month==1}}'>{{year}}/January</view>
+       <view class='time_days' wx:if='{{month==2}}'>{{year}}/February</view>
+        <view class='time_days' wx:if='{{month==3}}'>{{year}}/March</view>
+         <view class='time_days' wx:if='{{month==4}}'>{{year}}/April</view>
+          <view class='time_days' wx:if='{{month==5}}'>{{year}}/May</view>
+          <view class='time_days' wx:if='{{month==6}}'>{{year}}/June</view>
+           <view class='time_days' wx:if='{{month==7}}'>{{year}}/July</view>
+            <view class='time_days' wx:if='{{month==8}}'>{{year}}/August</view>
+             <view class='time_days' wx:if='{{month==9}}'>{{year}}/September</view>
+               <view class='time_days' wx:if='{{month==10}}'>{{year}}/October</view>
+                <view class='time_days' wx:if='{{month==11}}'>{{year}}/November</view>
+                 <view class='time_days' wx:if='{{month==12}}'>{{year}}/December</view>
+  </view>
+
+<view class='div'>
+    <view class='input'>
+        <input placeholder='标题' placeholder-style='color:#A8A8A8;font-size:36rpx;' class='input_' bindinput='title'></input>
+        <image src='../../img/zy_74.png' style='width:60rpx;margin-left:50rpx;margin-top:20rpx;' mode='widthFix'></image>
+    </view>
+
+    <view class='play'>选择类型</view>
+    <scroll-view style='white-space: nowrap;' scroll-x='true'>
+      <view class='add_card_type_scroll-view'>
+          <view class='card_frame_bottom_img'>
+              <image src='{{url}}/{{types_img[0].img_gray}}' style='width:100%;height:100%' wx:if='{{g0}}'></image>
+              <image src='{{url}}/{{types_img[0].img}}' style='width:100%;height:100%' wx:if='{{g1}}' id='{{types_img[0].id}}' bindtap='gb'></image>
+          </view>
+          <view class='card_frame_bottom_img'>
+              <image src='{{url}}/{{types_img[1].img}}' style='width:100%;height:100%' wx:if='{{r0}}' id='{{types_img[1].id}}' bindtap='rl'></image>
+               <image src='{{url}}/{{types_img[1].img_gray}}' style='width:100%;height:100%' wx:if='{{r1}}'></image>
+          </view>
+          <view class='card_frame_bottom_img'>
+              <image src='{{url}}/{{types_img[2].img}}' style='width:100%;height:100%' wx:if='{{gw0}}' id='{{types_img[2].id}}' bindtap='gw'></image>
+              <image src='{{url}}/{{types_img[2].img_gray}}' style='width:100%;height:100%' wx:if='{{gw1}}'></image>
+          </view>
+          <view class='card_frame_bottom_img'>
+              <image src='{{url}}/{{types_img[3].img}}' style='width:100%;height:100%' wx:if='{{ly0}}' id='{{types_img[3].id}}'bindtap='ly'></image>
+              <image src='{{url}}/{{types_img[3].img_gray}}' style='width:100%;height:100%' wx:if='{{ly1}}'></image>
+          </view>
+          <view class='card_frame_bottom_img'>
+              <image src='{{url}}/{{types_img[4].img}}' style='width:100%;height:100%' wx:if='{{hd0}}' id='{{types_img[4].id}}' bindtap='hd'></image>
+              <image src='{{url}}/{{types_img[4].img_gray}}' style='width:100%;height:100%' wx:if='{{hd1}}'></image>
+          </view>
+          <view class='card_frame_bottom_img'>
+              <image src='{{url}}/{{types_img[5].img}}' style='width:100%;height:100%' wx:if='{{jx0}}' id='{{types_img[5].id}}' bindtap='jx'></image>
+              <image src='{{url}}/{{types_img[5].img_gray}}' style='width:100%;height:100%' wx:if='{{jx1}}'></image>
+          </view>
+          <view class='card_frame_bottom_img'>
+              <image src='{{url}}/{{types_img[6].img}}' style='width:100%;height:100%' wx:if='{{dk0}}' id='{{types_img[6].id}}' bindtap='dk'></image>
+              <image src='{{url}}/{{types_img[6].img_gray}}' style='width:100%;height:100%' wx:if='{{dk1}}'></image>
+          </view>
+          <view class='card_frame_bottom_img'>
+              <image src='{{url}}/{{types_img[7].img}}' style='width:100%;height:100%' wx:if='{{qt0}}' id='{{types_img[7].id}}' bindtap='qt'></image>
+              <image src='{{url}}/{{types_img[7].img_gray}}' style='width:100%;height:100%' wx:if='{{qt1}}'></image>
+          </view>
+       
+      </view>
+    </scroll-view>
+
+    <textarea placeholder='这一刻的想法...' placeholder-style='color:#AFAFAF;font-size:28rpx;' class='text' bindinput='content'/>
+
+    <view class='div_tp'>
+         <block wx:for='{{img_}}'> 
+            <view class='div_list' wx:if='{{img}}'>  
+                <image  src='{{img_[index]}}' style='width:100%;height:100%' ></image>           
+            </view>
+          </block> 
+        <view class='div_list' catchtap='img' wx:if='{{img_s}}'>
+            <image src='../../img/zy_79.png'  style='width:100%;' mode='widthFix'/>
+        </view>
+    </view>
+
+    <!-- <view class='address'>
+        <image src='../../img/zy_72.png' style='width:40rpx;margin-top:20rpx;margin-left:40rpx;' mode='widthFix'/>
+        <view class='address_text'>所在位置</view>
+        <image src='../../img/(lj)4.png' style='width:20rpx;margin-left:400rpx;margin-top:30rpx;' mode='widthFix'/>
+    </view> -->
+</view>

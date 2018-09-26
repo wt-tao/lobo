@@ -1,0 +1,63 @@
+.main{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  left: 0;
+  top: 0;
+}
+.main_bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.warp{
+  width: 100%;
+  height: 566rpx;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  /* bottom: -566rpx; */
+  left: 0;
+  /* transform: translateY(566rpx); */
+  /* transition: transform 200ms; */
+}
+.warp_hide{
+  /* bottom: 0; */
+  height: 566rpx;
+  transform: translateY(0);
+}
+.picker_box{
+  height: 476rpx;
+  width: 100%;
+}
+.warp_head{
+  display: flex;
+  justify-content: space-between;
+  line-height: 90rpx;
+  border-bottom:1px solid #efefef;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  font-size: 34rpx;
+}
+.cancel_text{
+  color: #999;
+}
+.confirm_text{
+  color: #1AAD19;
+}
+.time_item{
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.to{
+  height: 100%;
+  line-height: 476rpx;
+  width: 120rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
