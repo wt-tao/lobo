@@ -1,11 +1,12 @@
 /* pages/lobo_task/lobo_task.wxss */
 .div{
   width: 100%;
-  height: 1210rpx;
+  /* height: 1210rpx; */
   /* border: 1rpx solid black; */
-  position: relative;
+  position: fixed;
+  top: 0;
   z-index: 1002;
-  margin-top: -1214rpx;
+  /* margin-top: -1214rpx; */
 }
 .div_top{
   height: 220rpx;
@@ -34,6 +35,7 @@
   font-size: 70rpx;
   line-height: 90rpx;
   color: #FFFBFB;
+  font-weight: bold;
 }
 .div_list_right{
   width: 35%;
@@ -92,12 +94,13 @@
 .money_div_list_texts{
   font-size: 50rpx;
   line-height: 60rpx;
+  font-weight: bold;
 }
 .annotation{
   height: 150rpx;
   width: 100%;
-  border-top:10rpx solid #FFCFE4; 
-  border-bottom:10rpx solid #FFCFE4; 
+  border-top:5rpx solid #FFCFE4; 
+  border-bottom:5rpx solid #FFCFE4; 
 }
 .annotation_div{
   width: 90%;

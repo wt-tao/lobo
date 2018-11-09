@@ -8,7 +8,7 @@
 </view>
 <view class='list'>
   <view class='list_kuang'>
-      <view class='list_tit'>共同资产（元）</view>
+      <view class='list_tit'>恋爱基金（元）</view>
       <view class='list_money'>
           <view class='list_money_'>{{money.loveTotalAmount}}</view>
           <view class='list_money_right'>
@@ -28,7 +28,7 @@
               <view class='list_tx' style='background-color:white' bindtap='tx' data-type='2' data-loveTotalAmount='{{money.loboTotalAmount}}' >
                   <image src='../../img/tc-751.png' style='width:260rpx;margin-left:-10rpx;margin-top:-10rpx;' mode='widthFix'></image>
               </view>
-              <view class='list_text'>提现权限请到结婚提现中开通</view>
+              <view class='list_text' style='width:100%;margin-left:10rpx;'>提现权限请到结婚提现中开通</view>
           </view>
       </view>
   </view>

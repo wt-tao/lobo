@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    id:1,
     show:1,
     url: getApp().globalData.url,
     // 瞬间
@@ -19,7 +20,14 @@ Page({
     so2: true,
     display: 'none',
   },
+  imge:function(){
+    // console.log('123')
+    this.setData({
+      id:!this.data.id
+    })
+  },
   lobo_main: function () {
+  
     this.setData({
       show:1,
       so0: false,
@@ -348,7 +356,7 @@ Page({
   lobo_history: function () {
     var my = this.data.my
     console.log(my)
-    if (my.password == true) {
+    if (my.password_view_bind_history == true) {
       this.setData({
         display: 'block',
       })

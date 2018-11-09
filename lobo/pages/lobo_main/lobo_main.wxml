@@ -1,18 +1,19 @@
 <!--index.wxml-->
 <view hidden='{{so0}}'>
-<image src='../../img/zy-22.png' style='width:100%;height:1296rpx;'  class='img'></image>
-<view class='page'>
+<image src='../../img/zy-22.png' style='width:100%;height:1210rpx;'  class='img'></image>
+<view class='page1'>
    <view class='texts' wx:if='{{text==""}}'>枕边还有你的味道\n 早！祝你一天好心情</view>
    <view class='texts' wx:if='{{text!=""}}'>{{text}}</view>
 
     <view class='input'>
-        <input class='input_' placeholder='明天想对他说点什么...' placeholder-style='color:#888888;font-size:26rpx;' bindinput='coun'/>
+        <input class='input_' placeholder='明天想对他说点什么...' placeholder-style='color:#888888;font-size:26rpx;' bindinput='coun' maxlength='52'/>
+        <!-- <image src='../../img/tc-896.png' style='width:100rpx;margin-top:8rpx;margin-left:70rpx;' mode='widthFix' bindtap='cy' /> -->
         <image src='../../img/tc-896.png' style='width:100rpx;margin-top:8rpx;margin-left:70rpx;' mode='widthFix' bindtap='cy' />
     </view>
 </view>
 </view>
 
-
+ 
 <view hidden='{{so}}'>
 <!-- 首页 -->
 
@@ -82,23 +83,25 @@
 
 <!-- 瞬间 -->
 <view hidden='{{so1}}'>
-
+<view style='background-color:white;'>
 <image src='../../img/zy_26.png' style='width:100%;height:297rpx;'  />
 <view class='heads'>
   <view class='hello'>
-    <view class='hello_tit'>你好，{{cardHead.nickname}}</view>
+    <view class='hello_tit'>
+       <image src='{{url}}{{cardHead.levelIco}}' style='width:50%' mode='widthFix' ></image>
+    </view>
     <image src='../../img/zy_5.png' style='width:120rpx;margin-top:-30rpx;margin-left:50rpx;' mode='widthFix' bindtap='add' />
   </view>
   <view class='list'>
     <view class='list_left' >
-      <view class='list_left_wz' catchtap='decal' wx:if='{{cardHead.levelIco==""}}'>
+      <view class='list_left_wz' catchtap='decal' >
         <image src='../../img/zy_31.png' style='width:100%' mode='widthFix' ></image>
         <view style='margin-top:-100rpx;'>decal</view>
       </view>
-       <view class='list_left_wz' catchtap='decal' wx:if='{{cardHead.levelIco!=""}}'>
+       <!-- <view class='list_left_wz' catchtap='decal' wx:if='{{cardHead.levelIco!=""}}'>
         <image src='{{url}}{{cardHead.levelIco}}' style='width:100%' mode='widthFix' ></image>
         <view style='margin-top:-100rpx;'></view>
-      </view>
+      </view> -->
     </view>
     <view class='list_right'>
         <view class='list_right_top'>{{cardHead.loveDays}}天</view>
@@ -116,9 +119,9 @@
 </view>
 <view class='tit'>
     <view class='all' catchtap='all'>全部 ></view>
-    <view class='all_tb'>
-        <image src='{{url}}/img/userCenterIcon/(bz)b2 (2).png' style='width:60rpx;margin-left:50rpx;' mode='widthFix'/>
-        <image src='{{url}}/img/userCenterIcon/(bz)b2 (1).png' style='width:60rpx;margin-left:20rpx;' mode='widthFix'/>
+    <view class='all_tb' bindtap='imge'>
+        <image src='{{url}}/img/{{id==1?"imgs/zy_5@3x (1).png":"userCenterIcon/(bz)b2 (2).png"}}' style='width:60rpx;margin-left:50rpx;'  mode='widthFix'/>
+        <image src='{{url}}/img/{{id!=1?"userCenterIcon/(bz)b2 (1).png":"imgs/zy_5@3x (2).png"}}' style='width:60rpx;margin-left:20rpx;' mode='widthFix' />
     </view>
       <!-- <view class='all_tb'>
         <image src='../../img/(bz)b2 (2).png' style='width:60rpx;margin-left:50rpx;' mode='widthFix'/>
@@ -126,25 +129,51 @@
     </view> -->
 </view>
 
-
+<view hidden='{{id!=1}}'>
 <view class='kuang'>
   <view class='left_list' >
     <view class='left_img' wx:for="{{listArray}}" wx:if='{{item.id%2==1}}' bindtap='details' id='{{item.id}}' data-id='{{user_id}}'>
-          <image src='{{url}}{{item.imgs[0]}}' style='width:100%;' mode='widthFix'></image>
+          <image src='{{url}}{{item.imgs[0]}}' style='width:100%;' mode='widthFix' class='img1'></image>
     </view>
       <!-- <view class='left_img'></view> -->
   </view>
 
-
 <!-- 右 -->
    <view class='left_list' >
       <view class='left_img'  wx:for="{{listArray}}" wx:if='{{item.id%2==0}}' bindtap='details' id='{{item.id}}'>
-          <image src='{{url}}{{item.imgs[0]}}' style='width:100%;' mode='widthFix' ></image>
+          <image src='{{url}}{{item.imgs[0]}}' style='width:100%;' mode='widthFix' class='img1'></image>
       </view>
   </view>
 </view>
 </view>
+<view hidden='{{id==1}}'>
+  <view class='list2' wx:for='{{listArray}}'>
+    <image src='{{url}}{{item.imgs[0]}}' style='width:100%;height:200rpx;border-top-left-radius:30rpx;border-top-right-radius:30rpx;' mode='aspectFill'></image>
+    <view class='tits'>{{item.title}}</view>
+    <view class='texts1'> {{item.content}}</view>
 
+ <block wx:for='{{item.replyList}}' wx:for-item='key'>
+    <view class='tx9'  wx:if='{{key.user_id!=user_id}}'>
+        
+        <image src='{{url}}{{key.head_img==""?head_img:key.head_img}}' class='imgst' mode='aspectFill'></image>
+        <image src='../../img/zy_33 (2).png' style='width:70%;margin-left:20rpx;' mode='widthFix'></image>
+        <view class='img_text' style='margin-left:-69%;'>{{key.content}}</view>
+    </view>
+      <view class='tx9' wx:if='{{key.user_id == user_id}}'>
+        <image src='../../img/zy_33 (1).png' style='width:70%;margin-left:100rpx;' mode='widthFix'></image>
+        <image src='{{url}}{{key.head_img==""?head_img:key.head_img}}' class='imgst' style='margin-left:40rpx;' mode='aspectFill'></image>
+        
+        <view class='img_text' style='margin-left:-86%;width:58%;text-align: right;'>{{key.content}}</view>
+    </view>
+</block>
+    <view style='height:20rpx;width:100%'></view>
+</view>
+</view>
+
+
+<view style='height:130rpx'></view>
+</view>
+</view>
 
 
 
@@ -168,7 +197,7 @@
             </view>
             <view class='tiss' >
               <view class='tis'>绑定于{{pairDays}}</view>
-              <view class='tis' style='margin-top:0;line-height: 20rpx;'>相爱{{day}}天</view>
+              <view class='tis' style='margin-top:0;line-height: 30rpx;'>相爱{{day}}天</view>
             </view>
             <image src="{{url}}{{my.opposite_head_img==''?head_Img:my.opposite_head_img}}" style='width:80rpx;margin-top:20rpx;margin-left:10rpx;height:80rpx;' mode='aspectFill' class='head_imgs'/>
         </view>

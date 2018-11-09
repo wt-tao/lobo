@@ -1,1 +1,6 @@
-{"navigationBarTitleText": "lobo联盟"}
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#C571F4",
+  "navigationBarTitleText": "lobo联盟",
+  "navigationBarTextStyle": "black"
+  }

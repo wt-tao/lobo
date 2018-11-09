@@ -1,1 +1,5 @@
-{"navigationBarTitleText": "每日任务"}
+{
+"backgroundTextStyle": "light",
+"navigationBarBackgroundColor": "#C471F5",
+"navigationBarTitleText": "每日任务",
+"navigationBarTextStyle": "black"}

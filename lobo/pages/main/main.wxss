@@ -1,16 +1,19 @@
 /* pages/main/main.wxss */
-.img{
+page{
+  background-color: black;
+}
+/* .img{
   position: absolute;
   top: 0;
   z-index: 1001,
-}
+} */
 .index{
   position: relative;
   top: 400rpx;
   z-index: 1002;
   animation: show 3s;
 }
-@keyframes show {
+/* @keyframes show {
   0% {
     opacity: 0;
   }
@@ -30,4 +33,4 @@
   100% {
     opacity: 1;
   }
-}
+} */

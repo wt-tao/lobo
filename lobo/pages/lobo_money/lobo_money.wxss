@@ -10,7 +10,7 @@ page{
   top: -410rpx;
 }
 .head_top{
-  font-size: 30rpx;
+  font-size: 32rpx;
   color: #FFE2FF;
   width: 95%;
   text-align: right;
@@ -33,7 +33,7 @@ page{
   padding-left: 2.5%;
   margin-top: 80rpx;
   height: 60rpx;
-  font-size: 20rpx;
+  font-size: 24rpx;
   color: #FFBAFD;
   background-color: #DF65BA;
   line-height: 60rpx;
@@ -73,6 +73,7 @@ page{
   height: 120rpx;
   font-size: 70rpx;
   line-height: 120rpx;
+  font-weight: bolder;
 }
 .list_money_right{
   width: 45%;
@@ -83,17 +84,18 @@ page{
   height: 80rpx;
   border-radius: 38rpx;
   line-height: 80rpx;
-  margin-left: 50rpx;
+  margin-left: 80rpx;
   text-align: center;
   color: #F8F8F8;
   background-color: #B3B3B3;
   font-size: 34rpx;
+  /* border: 1rpx solid black;  */
 }
 .list_text{
-  width: 100%;
-  text-align: center;
+  width: 70%;
+  text-align: right;
   font-size: 22rpx;
-  color: white;
+  color: #EE71D6;
   margin-top: 10rpx;
 }
 .text_cj{

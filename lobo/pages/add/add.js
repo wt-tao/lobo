@@ -6,237 +6,39 @@ Page({
    * 页面的初始数据
    */
   data: {
+    addres:true,
+    ids:111,
     url: getApp().globalData.url,
-    g0: true,
-    g1: false,
-
-    r0: true,
-    r1: false,
-
-    gw0: true,
-    gw1: false,
-
-    ly0: true,
-    ly1: false,
-
-    hd0: true,
-    hd1: false,
-
-    jx0: true,
-    jx1: false,
-
-    dk0: true,
-    dk1: false,
-
-    qt0: true,
-    qt1: false,
-
 
     img: false,
     img_: [],//上传
+    video_:[],
     img_s:true,
     id:1,
+  },
+  imges:function(){
+    this.setData({
+      addres: false,
+    })
+  },
+  bindAddrestap: function () {
+    this.setData({
+      addres: true,
+    })
+  },
+  imgs:function(e){
+    console.log(e)
+    this.setData({
+      ids: e.currentTarget.id,
+    })
   },
   gb: function (e) {
     this.setData({
       id: e.currentTarget.id,
-      g0: true,
-      g1: false,
-      r0: true,
-      r1: false,
-      gw0: true,
-      gw1: false,
-      ly0: true,
-      ly1: false,
 
-      hd0: true,
-      hd1: false,
-
-      jx0: true,
-      jx1: false,
-
-      dk0: true,
-      dk1: false,
-
-      qt0: true,
-      qt1: false,
     })
   },
-  rl: function (e) {
-    this.setData({
-      id: e.currentTarget.id,
-      g0: false,
-      g1: true,
-      r0: false,
-      r1: true,
-      gw0: true,
-      gw1: false,
-      ly0: true,
-      ly1: false,
-
-      hd0: true,
-      hd1: false,
-
-      jx0: true,
-      jx1: false,
-
-      dk0: true,
-      dk1: false,
-
-      qt0: true,
-      qt1: false,
-    })
-  },
-  gw: function (e) {
-    this.setData({
-      id: e.currentTarget.id,
-      g0: false,
-      g1: true,
-      r0: true,
-      r1: false,
-      gw0: false,
-      gw1: true,
-      ly0: true,
-      ly1: false,
-
-      hd0: true,
-      hd1: false,
-
-      jx0: true,
-      jx1: false,
-
-      dk0: true,
-      dk1: false,
-
-      qt0: true,
-      qt1: false,
-    })
-  },
-  ly: function (e) {
-    this.setData({
-      id: e.currentTarget.id,
-      g0: false,
-      g1: true,
-      r0: true,
-      r1: false,
-      gw0: true,
-      gw1: false,
-      ly0: false,
-      ly1: true,
-
-      hd0: true,
-      hd1: false,
-
-      jx0: true,
-      jx1: false,
-
-      dk0: true,
-      dk1: false,
-
-      qt0: true,
-      qt1: false,
-    })
-  },
-  hd: function (e) {
-    this.setData({
-      id: e.currentTarget.id,
-      g0: false,
-      g1: true,
-      r0: true,
-      r1: false,
-      gw0: true,
-      gw1: false,
-      ly0: true,
-      ly1: false,
-
-      hd0: false,
-      hd1: true,
-
-      jx0: true,
-      jx1: false,
-
-      dk0: true,
-      dk1: false,
-
-      qt0: true,
-      qt1: false,
-    })
-  },
-  jx: function (e) {
-    this.setData({
-      id: e.currentTarget.id,
-      g0: false,
-      g1: true,
-      r0: true,
-      r1: false,
-      gw0: true,
-      gw1: false,
-      ly0: true,
-      ly1: false,
-
-      hd0: true,
-      hd1: false,
-
-      jx0: false,
-      jx1: true,
-
-      dk0: true,
-      dk1: false,
-
-      qt0: true,
-      qt1: false,
-    })
-  },
-  dk: function (e) {
-    this.setData({
-      id: e.currentTarget.id,
-      g0: false,
-      g1: true,
-      r0: true,
-      r1: false,
-      gw0: true,
-      gw1: false,
-      ly0: true,
-      ly1: false,
-
-      hd0: true,
-      hd1: false,
-
-      jx0: true,
-      jx1: false,
-
-      dk0: false,
-      dk1: true,
-
-      qt0: true,
-      qt1: false,
-    })
-  },
-  qt: function (e) {
-    this.setData({
-      id: e.currentTarget.id,
-      g0: false,
-      g1: true,
-      r0: true,
-      r1: false,
-      gw0: true,
-      gw1: false,
-      ly0: true,
-      ly1: false,
-
-      hd0: true,
-      hd1: false,
-
-      jx0: true,
-      jx1: false,
-
-      dk0: true,
-      dk1: false,
-
-      qt0: false,
-      qt1: true,
-    })
-  },
+ 
   // 标题
   title: function (e) {
     console.log(e)
@@ -252,39 +54,74 @@ Page({
     })
   },
   // 上传
-  img: function () {
-    // var cover_img = this.data.cover_img
-    // console.log(cover_img)
+  img: function (e) {
     var that = this,
       img_ = this.data.img_;
-    wx.chooseImage({
-      count: 9, // 默认9
-      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-      success: function (res) {
-        var imgsrc = res.tempFilePaths;
-        img_ = img_.concat(imgsrc);
-        // img_.unshift(cover_img)
-        // console.log(img_)
-        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-        if(img_.length>8){
+    // video_ = this.data. video_  
+    if (e.currentTarget.id==1){
+      wx.chooseImage({
+        count: 9, // 默认9
+        sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+        sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+        success: function (res) {
+          var imgsrc = res.tempFilePaths;
+          img_ = img_.concat(imgsrc);
+          
+          if(img_.length>8){
+            that.setData({
+              img_s:false
+            })
+          }
           that.setData({
-            img_s:false
+            img: true,
+            img_: img_,
+            addres:true,
           })
         }
-        that.setData({
-          img: true,
-          img_: img_
-        })
-
-      }
-    })
+      })
+    }
+    if (e.currentTarget.id == 2){
+      wx.chooseVideo({
+        sourceType: ['album', 'camera'],
+        maxDuration: 60,
+        camera: 'back',
+        success: function (res) {
+          console.log(res)
+          wx.showLoading({
+            title: '上传中...',
+          })
+          var imgsrc = res.tempFilePath;
+              img_ = img_.concat(imgsrc);
+          console.log(img_)
+          wx.hideLoading()
+          console.log('size', res.size)
+          if (res.size  > 1024 * 1024 * 2) {
+            wx.showModal({
+              title: '超出限制',
+              content: '很抱歉，视频最大允许2M，当前为' + (res.size  / (1024 * 1024)).toFixed(2) + 'M',
+            
+            })
+            return false;}
+          if (img_.length > 8) {
+            that.setData({
+              img_s: false
+            })
+          }
+          that.setData({
+            img: true,
+            img_: img_,
+            addres: true,
+          })
+        }
+      })
+    }
   },
   add: function (e) {
     var token = wx.getStorageSync('token')
     var type_id = this.data.id
     var content = this.data.content
     var imgs_ = this.data.img_
+    console.log('imgs_', imgs_)
     var title = this.data.title
     var that = this    
     if (title == undefined) {

@@ -15,7 +15,7 @@
       </view>
       <view class='div_time'>{{item.createTime}}</view>
       <view style='height:20rpx;width:100%;'></view>
-      <view style='height:20rpx;background-color: #F2F2F2;width:100%'></view>
+      <view style='height:10rpx;background-color: #F2F2F2;width:100%'></view>
     </view>
 
   
